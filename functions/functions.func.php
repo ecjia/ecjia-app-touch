@@ -71,3 +71,8 @@ function set_touch_session_id($session_id) {
 }
 RC_Hook::add_filter('ecjia_front_session_id', 'set_touch_session_id');
 
+/**
+ * 自动加载类注册
+ */
+RC_Hook::add_action('class_ecjia_touch_api',             function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_api', false);});
+RC_Hook::add_action('class_ecjia_touch_manager',         function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_manager', false);});
