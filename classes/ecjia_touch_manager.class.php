@@ -4,7 +4,7 @@
  * @author royalwang
  *
  */
-class touch_manager extends Ecjia\System\Api\ApiManager
+class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
 {
     
     

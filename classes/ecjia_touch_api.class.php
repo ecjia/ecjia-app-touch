@@ -1,6 +1,6 @@
 <?php
 
-class touch_api 
+class ecjia_touch_api 
 {
     
     
