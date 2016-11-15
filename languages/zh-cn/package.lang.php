@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * ECJIA 应用语言包
+ */
+
+defined('IN_ECJIA') or exit('No permission resources.');
+
+$LANG['touch']            		= '微商城';
+$LANG['touch_desc']       		= '微商城应用描述';
+
+
+// end
