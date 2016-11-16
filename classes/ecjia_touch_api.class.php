@@ -11,10 +11,10 @@ class ecjia_touch_api
 	const SHOP_PAYMENT = 'shop/payment'; //支付方式
 	const SHOP_REGION  = 'shop/region';//地区
 	const SHOP_HELP	   = 'shop/help';//商店帮助分类列表
-	const SHOP_HELP_DETAIL = 'shop/help/detail';//商店帮助内容
 	const SHOP_INFO	   = 'shop/info';//网店信息
+	const SHOP_HELP_DETAIL = 'shop/help/detail';//商店帮助内容
 	const SHOP_INFO_DETAIL = 'shop/info/detail';//网店信息内容
-	const SHOP_SERVER  = 'shop/server';//服务器环境信息
+	const SHOP_SERVER      = 'shop/server';//服务器环境信息
     
     //==============================================
     // 首页
@@ -28,10 +28,10 @@ class ecjia_touch_api
     //==============================================
     // 收货地址
     //==============================================
-    const ADDRESS_ADD   = 'address/add'; // 添加地址
+    const ADDRESS_ADD    = 'address/add'; // 添加地址
     const ADDRESS_DELETE = 'address/delete'; // 删除地址
-    const ADDRESS_INFO  = 'address/info'; // 单条地址信息
-    const ADDRESS_LIST  = 'address/list'; // 所有地址列表
+    const ADDRESS_INFO   = 'address/info'; // 单条地址信息
+    const ADDRESS_LIST   = 'address/list'; // 所有地址列表
     const ADDRESS_UPDATE = 'address/update'; // 更新单条地址信息
     const ADDRESS_SETDEFAULT = 'address/setDefault'; // 设置默认地址
     
@@ -65,7 +65,6 @@ class ecjia_touch_api
  	const GOODS_LIST		= 'goods/list';//商品列表
  	const GOODS_SUGGESTLIST	= 'goods/suggestlist';//商品推荐列表
  	const GOODS_DETAIL		= 'goods/detail';//单个商品的信息
- 	const GOODS_DETAILS		= 'goods/details';//单个商品的信息
  	const GOODS_DESC		= 'goods/desc';//单个商品的详情
  	const GOODS_BRAND		= 'goods/brand';//某一分类的品牌类表
  	const GOODS_FILTER		= 'goods/filter';//某一分类的属性列表
@@ -130,5 +129,9 @@ class ecjia_touch_api
  	// 设备
  	//==============================================
  	const DEVICE_SETDEVICETOKEN = 'device/setDeviceToken';//设备号
+ 	
+ 	
+ 	
+ 	
  	   
 }
