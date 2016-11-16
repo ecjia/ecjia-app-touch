@@ -933,6 +933,9 @@ $LANG['collect_to_flow'] = '立即购买';
 /* 登录注册 */
 $LANG['forthwith_login'] = '登录';
 $LANG['forthwith_register'] = '注册新用户';
+$LANG['message_authentication_code'] = '请输入收到的短信验证码';
+$LANG['input_verification'] = '输入验证码';
+$LANG['return_verification'] = '获取验证码';
 $LANG['signin_failed'] = '对不起，登录失败，请检查您的用户名和密码是否正确';
 $LANG['gift_remainder'] = '说明：在您登录或注册后，请到购物车页面重新选择赠品。';
 
