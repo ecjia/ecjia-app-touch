@@ -547,6 +547,7 @@ $LANG['login_now'] = '立即登陆';
 $LANG['login'] = '登陆';
 $LANG['name_or_mobile'] = '请输入用户名或手机号';
 $LANG['input_passwd'] = '请输入密码';
+$LANG['next'] = '下一步';
 $LANG['reg_now'] = '立即注册';
 
 /* 商品品牌页 */
