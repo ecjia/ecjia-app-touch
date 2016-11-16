@@ -3,23 +3,230 @@
 class ecjia_touch_api 
 {
     
+	
+	//==============================================
+	// 商店配置
+	//==============================================
+    const SHOP_CONFIG  = 'shop/config';//商店配置
+	const SHOP_TOKEN   = 'shop/token';//获取token信息
+	const SHOP_PAYMENT = 'shop/payment'; //支付方式
+	const SHOP_REGION  = 'shop/region';//地区
+	const SHOP_HELP	   = 'shop/help';//商店帮助分类列表
+	const SHOP_HELP_DETAIL = 'shop/help/detail';//商店帮助内容
+	const SHOP_INFO	   = 'shop/info';//网店信息
+	const SHOP_INFO_DETAIL = 'shop/info/detail';//网店信息内容
+	const SHOP_SERVER  = 'shop/server';//服务器环境信息
     
-    const SHOP_CONFIG = 'shop/config';
-    
-    
+    //==============================================
+    // 首页
+    //==============================================
+    const HOME_CATEGORY = 'home/category';//HOME分类
+    const HOME_DATA 	= 'home/data';//HOME数据
+    const TV_HOME_DATA	= 'tv/home/data'; //TV首页数据
+    const HOME_ADSENSE  = 'home/adsense';//HOME广告
+    const HOME_DISCOVER = 'home/discover';//discover数据
+    const HOME_NEWS 	= 'home/news';//今日热点数据
     
     //==============================================
     // 收货地址
     //==============================================
     const ADDRESS_ADD   = 'address/add'; // 添加地址
-    const ADDRESS_DELETE    = 'address/delete'; // 删除地址
+    const ADDRESS_DELETE = 'address/delete'; // 删除地址
     const ADDRESS_INFO  = 'address/info'; // 单条地址信息
     const ADDRESS_LIST  = 'address/list'; // 所有地址列表
     const ADDRESS_UPDATE = 'address/update'; // 更新单条地址信息
     const ADDRESS_SETDEFAULT = 'address/setDefault'; // 设置默认地址
     
+    //==============================================
+    // 文章
+    //==============================================
+    const ARTICLE_CATEGORY  = 'article/category'; // 文章分类
+    const ARTICLE_DETAIL   	= 'article/detail'; // 获取单篇文章
+    
+    //==============================================
+    // 红包模块
+    //==============================================
+ 	const BONUS_VALIDATE 	= 'bonus/validate';//红包获取验证
+ 	const BONUS_BIDN		= 'bonus/bind';//红包兑换
+ 	const BONUS_COUPON 		= 'bonus/coupon';//获取优惠红包列表信息O2O
+ 	const RECEIVE_COUPON 	= 'receive/coupon';//领取商品或店铺优惠券
+ 	const SEND_COUPON 		= 'send/coupon';//获取优惠券
+ 	
+ 	//==============================================
+ 	// 专题
+ 	//==============================================
+ 	const TOPIC_info = 'topic/info';//专题详情
+ 	
+ 	//==============================================
+ 	// 评论
+ 	//==============================================
+ 	const COMMENT_CREATE = 'comment/create';//发表评论
+ 	const ORDER_COMMENT  = 'order/comment';//获取订单评论
+ 	
+ 	//==============================================
+ 	// 留言反馈
+ 	//==============================================
+ 	const FEEDBACK_LIST		= 'feedback/list';//留言反馈列表
+ 	const FEEDBACK_CREATE 	= 'feedback/create';//提交留言反馈
+ 	const ADMIN_FEEDBACK_LIST 	  = 'admin/feedback/list';//咨询列表
+ 	const ADMIN_FEEDBACK_MESSAGES = 'admin/feedbak/messages';//咨询详细信息
+ 	const ADMIN_FEEDBACK_REPLY    = 'admin/feedback/reply';//掌柜咨询回复（包含：订单，商品及用户）
+ 	
+ 	//==============================================
+ 	// 购物车
+ 	//==============================================
+ 	const CART_CREATE 		= 'cart/create'; //添加到购物车
+ 	const CART_GIFT_CREATE 	= 'cart/gift/create'; //添加赠品到购物车		
+ 	const CART_DELETE		= 'cart/delete'; //从购物车中删除商品
+ 	const CART_LIST			= 'cart/list';//购物车列表
+ 	const CART_UPDATE		= 'cart/update';//购物车更新商品数目
+ 	const FLOW_CHECKORDER 	= 'flow/checkOrder';//购物流检查订单
+ 	const FLOW_DONE			= 'flow/done';//购物流完成
+ 	
+ 	//==============================================
+ 	// 商品
+ 	//==============================================
+ 	const CATEGORY			= 'category';//所有分类
+ 	const GOODS_CATEGORY 	= 'goods/category';//所有分类
+ 	const COMMENTS			= 'comments';//某商品的所有评论	
+ 	const GOODS_COMMENTS 	= 'goods/comments';//某商品的所有评论
+ 	const GOODS 			= 'goods';//单个商品的信息
+ 	const GOODS_LIST		= 'goods/list';//商品列表
+ 	const GOODS_SUGGESTLIST		= 'goods/suggestlist';//商品推荐列表
+ 	const GOODS_GROUPBUYGOODS	= 'goods/groupbuygoods';//团购商品列表
+ 	const GOODS_MOBILEBUYGOODS 	= 'goods/mobilebuygoods';//手机专享商品列表
+ 	const GOODS_DETAIL		= 'goods/detail';//单个商品的信息
+ 	const GOODS_DETAILS		= 'goods/details';//单个商品的信息
+ 	const GOODS_DESC		= 'goods/desc';//单个商品的详情
+ 	const GOODS_BRAND		= 'goods/brand';//某一分类的品牌类表
+ 	const GOODS_FILTER		= 'goods/filter';//某一分类的属性列表
+ 	const GOODS_PRICE_RANGE = 'goods/price_range';//价格范围
+ 	const GOODS_SEARCH 		= 'goods/search';//搜索
+ 	const GOODS_SEARCHKEYWORDS 	= 'goods/searchKeywords';//搜索关键词
+ 	
+ 	//==============================================
+ 	// 订单
+ 	//==============================================
+ 	const ORDER_AFFIRMRECEIVED = 'order/affirmReceived';//订单确认收货
+ 	const ORDER_CANCEL	= 'order/cancel';//订单取消
+ 	const ORDER_LIST	= 'order/list';//订单列表
+ 	const ORDER_PAY		= 'order/pay';//订单支付
+ 	const ORDER_DETAIL	= 'order/detail';//订单详情
+ 	const ORDER_REMINDER = 'order/reminder'; //提醒卖家发货
+ 	const ORDER_UPDATE	= 'order/update';//订单更新
+ 	const ORDER_EXPRESS = 'order/express';//订单快递
+ 	
+ 	//==============================================
+ 	// 用户
+ 	//==============================================
+ 	const USER_COLLECT_CREATE = 'user/collect/create';//用户收藏商品
+ 	const USER_COLLECT_DELETE = 'user/collect/delete';//用户删除收藏商品
+ 	const USER_COLLECT_LIST   = 'user/collect/list';//用户收藏列表
+ 	const USER_INFO			  = 'user/info';//用户信息
+ 	const USER_SIGNIN	= 'user/signin';//用户登录
+ 	const USER_SIGNOUT	= 'user/signout';//用户退出
+ 	const VALIDATE_SIGNIN = 'validate/signin'; //用户手机验证码登录
+ 	const USER_SIGNUP 	= 'user/signup';//用户注册
+ 	const USER_FORGET_PASSWORD = 'user/forget_password'; //用户找回密码
+ 	const VALIDATE_FORGET_PASSWORD = 'validate/forget_password';//用户找回密码验证
+ 	const USER_RESET_PASSWORD = 'user/reset_password';//用户找回密码重置密码
+ 	const USER_PASSWORD = 'user/password';//修改登录密码
+ 	const USER_UPDATE = 'user/update';//用户图片上传或修改
+ 	const USER_SNSBIND = 'user/snsbind';//第三方登录
+ 	const USER_SEND_PWDMAIL = 'user/send_pwdmail';//邮箱找回密码/测试
+ 	const USER_SIGNUPFIELDS = 'user/signupFields';//用户注册字段
+ 	const USER_ACCOUNT_RECORD = 'user/account/record';//用户充值提现记录
+ 	const USER_ACCOUNT_LOG = 'user/account/log';//用户账户资金变更日志/测试
+ 	const USER_ACCOUNT_DEPOSIT = 'user/account/deposit';//用户充值申请
+ 	const USER_ACCOUNT_PAY = 'user/account/pay';//用户充值付款
+ 	const USER_ACCOUNT_RAPLY = 'user/account/raply';//用户提现申请
+ 	const USER_ACCOUNT_CANCEL = 'user/account/cancel';//用户申请取消
+ 	const USER_USERBIND = 'user/userbind';//手机快速注册
+ 	const VALIDATE_BIND = 'validate/bind';//验证用户绑定注册
+ 	const VALIDATE_BONUS = 'validate/bonus';//验证红包
+ 	const VALIDATE_INTEGRAL = 'validate/integral';//验证积分
+ 	const VALIDATE_ACCOUNT  = 'validate/account';//验证用户账户信息
+ 	const USER_ACCOUNT_UPDATE = 'user/account/update';//修改会员账户信息
+ 	
+ 	//==============================================
+ 	// 关联
+ 	//==============================================
+ 	const CONNECT_SIGNIN = 'connect/signin';//第三方关联登录
+ 	const CONNECT_SIGNUP = 'connect/signup';//第三方关联注册
+ 	const CONNECT_BIND   = 'connect/bind';//第三方关联绑定
+ 	
+ 	//==============================================
+ 	// 入驻
+ 	//==============================================
+ 	const GOODS_SEARCH1 = 'goods/search';//商店搜索（？？？？？重复）
+ 	
+ 	//==============================================
+ 	// 设备
+ 	//==============================================
+ 	const DEVICE_SETDEVICETOKEN = 'device/setDeviceToken';//设备号
+ 	
+ 	
+ 	//==============================================
+ 	// 移动应用
+ 	//==============================================
+ 	const MOBILE_QRCODE_VALIDATE = 'mobile/qrcode/validate'; //扫码登录验证二维码有效性
+ 	const MOBILE_CHECKIN_RECORD = 'mobile/checkind/record';//签到记录
+ 	const MOBILE_CHECKIN = 'mobile/checkin';//签到
+ 	const MOBILE_SHAKE = 'mobile/shake';//摇一摇
+ 	const MOBILE_TOUTIAO = 'mobile/toutiao';//获取店铺头条热门信息
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 		
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
     
     
-    
-    
+     
 }
