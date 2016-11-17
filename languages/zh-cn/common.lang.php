@@ -545,6 +545,8 @@ $LANG['welcome'] = '欢迎光临本店';
 $LANG['user_login'] = '会员登陆';
 $LANG['login_now'] = '立即登陆';
 $LANG['login'] = '登陆';
+$LANG['input_name'] = '请输入用户名';
+$LANG['set_your_password'] = '请设置登入密码';
 $LANG['name_or_mobile'] = '请输入用户名或手机号';
 $LANG['input_passwd'] = '请输入密码';
 $LANG['next'] = '下一步';
@@ -938,6 +940,7 @@ $LANG['input_verification'] = '输入验证码';
 $LANG['return_verification'] = '获取验证码';
 $LANG['invitation_code'] = '可输入好友的邀请码（选填）';
 $LANG['login_finish'] = '完成';
+$LANG['set_password'] = '设置密码';
 $LANG['signin_failed'] = '对不起，登录失败，请检查您的用户名和密码是否正确';
 $LANG['gift_remainder'] = '说明：在您登录或注册后，请到购物车页面重新选择赠品。';
 
