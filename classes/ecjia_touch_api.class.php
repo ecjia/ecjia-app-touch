@@ -63,6 +63,7 @@ class ecjia_touch_api
  	const GOODS_COMMENTS 	= 'goods/comments';//某商品的所有评论
  	const GOODS 			= 'goods';//单个商品的信息
  	const GOODS_LIST		= 'goods/list';//商品列表
+ 	const GOODS_SELLER_LIST	= 'goods/seller/list';//店铺分类列表
  	const GOODS_SUGGESTLIST	= 'goods/suggestlist';//商品推荐列表
  	const GOODS_DETAIL		= 'goods/detail';//单个商品的信息
  	const GOODS_DESC		= 'goods/desc';//单个商品的详情
