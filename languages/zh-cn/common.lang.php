@@ -936,6 +936,8 @@ $LANG['forthwith_register'] = '注册新用户';
 $LANG['message_authentication_code'] = '请输入收到的短信验证码';
 $LANG['input_verification'] = '输入验证码';
 $LANG['return_verification'] = '获取验证码';
+$LANG['invitation_code'] = '可输入好友的邀请码（选填）';
+$LANG['login_finish'] = '完成';
 $LANG['signin_failed'] = '对不起，登录失败，请检查您的用户名和密码是否正确';
 $LANG['gift_remainder'] = '说明：在您登录或注册后，请到购物车页面重新选择赠品。';
 
