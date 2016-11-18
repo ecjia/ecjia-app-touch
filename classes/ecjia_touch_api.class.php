@@ -57,21 +57,13 @@ class ecjia_touch_api
  	//==============================================
  	// 商品
  	//==============================================
- 	const CATEGORY			= 'category';//所有分类
  	const GOODS_CATEGORY 	= 'goods/category';//所有分类
- 	const COMMENTS			= 'comments';//某商品的所有评论	
  	const GOODS_COMMENTS 	= 'goods/comments';//某商品的所有评论
- 	const GOODS 			= 'goods';//单个商品的信息
- 	const GOODS_LIST		= 'goods/list';//商品列表
  	const GOODS_SELLER_LIST	= 'goods/seller/list';//店铺分类列表
  	const GOODS_SUGGESTLIST	= 'goods/suggestlist';//商品推荐列表
  	const GOODS_DETAIL		= 'goods/detail';//单个商品的信息
  	const GOODS_DESC		= 'goods/desc';//单个商品的详情
- 	const GOODS_BRAND		= 'goods/brand';//某一分类的品牌类表
  	const GOODS_FILTER		= 'goods/filter';//某一分类的属性列表
- 	const GOODS_PRICE_RANGE = 'goods/price_range';//价格范围
- 	const GOODS_SEARCH 		= 'goods/search';//搜索
- 	const GOODS_SEARCHKEYWORDS 	= 'goods/searchKeywords';//搜索关键词
  	
  	//==============================================
  	// 订单
