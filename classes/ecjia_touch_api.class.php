@@ -100,24 +100,24 @@ class ecjia_touch_api
  	const USER_ACCOUNT_PAY    = 'user/account/pay';//用户充值付款
  	const USER_ACCOUNT_RAPLY  = 'user/account/raply';//用户提现申请
  	const USER_ACCOUNT_CANCEL = 'user/account/cancel';//用户申请取消
+ 	const USER_ACCOUNT_UPDATE = 'user/account/update';//修改会员账户信息
  	const VALIDATE_BIND       = 'validate/bind';//验证用户绑定注册
  	const VALIDATE_BONUS      = 'validate/bonus';//验证红包
  	const VALIDATE_INTEGRAL   = 'validate/integral';//验证积分
  	const VALIDATE_ACCOUNT    = 'validate/account';//验证用户账户信息
- 	const USER_ACCOUNT_UPDATE = 'user/account/update';//修改会员账户信息
- 	
- 	const USER_SIGNIN	= 'user/signin';//用户登录
- 	const USER_SIGNOUT	= 'user/signout';//用户退出
- 	const VALIDATE_SIGNIN = 'validate/signin'; //用户手机验证码登录
- 	const USER_SIGNUP 	  = 'user/signup';//用户注册
- 	const USER_FORGET_PASSWORD     = 'user/forget_password'; //用户找回密码
+ 	const VALIDATE_SIGNIN     = 'validate/signin'; //用户手机验证码登录
  	const VALIDATE_FORGET_PASSWORD = 'validate/forget_password';//用户找回密码验证
+ 	
+ 	const USER_SIGNIN	           = 'user/signin';//用户登录
+ 	const USER_SIGNOUT	           = 'user/signout';//用户退出
+ 	const USER_SIGNUP 	           = 'user/signup';//用户注册
+ 	const USER_FORGET_PASSWORD     = 'user/forget_password'; //用户找回密码
  	const USER_RESET_PASSWORD      = 'user/reset_password';//用户找回密码重置密码
- 	const USER_PASSWORD = 'user/password';//修改登录密码
- 	const USER_SNSBIND  = 'user/snsbind';//第三方登录
- 	const USER_SEND_PWDMAIL = 'user/send_pwdmail';//邮箱找回密码/测试
- 	const USER_SIGNUPFIELDS = 'user/signupFields';//用户注册字段
- 	const USER_USERBIND     = 'user/userbind';//手机快速注册
+ 	const USER_PASSWORD       = 'user/password';//修改登录密码
+ 	const USER_SNSBIND        = 'user/snsbind';//第三方登录
+ 	const USER_SEND_PWDMAIL   = 'user/send_pwdmail';//邮箱找回密码/测试
+ 	const USER_SIGNUPFIELDS   = 'user/signupFields';//用户注册字段
+ 	const USER_USERBIND       = 'user/userbind';//手机快速注册
 
  	//==============================================
  	// 关联
@@ -125,11 +125,6 @@ class ecjia_touch_api
  	const CONNECT_SIGNIN = 'connect/signin';//第三方关联登录
  	const CONNECT_SIGNUP = 'connect/signup';//第三方关联注册
  	const CONNECT_BIND   = 'connect/bind';//第三方关联绑定
- 	
- 	//==============================================
- 	// 设备
- 	//==============================================
- 	const DEVICE_SETDEVICETOKEN = 'device/setDeviceToken';//设备号
  	
  	
  	//==============================================
