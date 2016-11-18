@@ -76,3 +76,12 @@ RC_Hook::add_filter('ecjia_front_session_id', 'set_touch_session_id');
  */
 RC_Hook::add_action('class_ecjia_touch_api',             function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_api', false);});
 RC_Hook::add_action('class_ecjia_touch_manager',         function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_manager', false);});
+
+/*
+ * ========================================
+ * API模型加载
+ * ========================================
+ */
+RC_Hook::add_action('class_api_shop_config_model',         function () {RC_Package::package('app::touch')->loadModel('api_shop_config_model', false);});
+
+
