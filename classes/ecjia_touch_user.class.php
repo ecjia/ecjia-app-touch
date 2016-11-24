@@ -69,6 +69,13 @@ class ecjia_touch_user extends RC_Object
         
     }
     
+    /**
+     * 获取用户登录凭证
+     */
+    public function getToken() 
+    {
+        return RC_Cookie::get(self::API_USER_COOKIE);
+    }
     
     public function getUserinfo()
     {
