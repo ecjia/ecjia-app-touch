@@ -8,11 +8,11 @@ class ecjia_touch_user extends RC_Object
     /**
      * 登录
      */
-    public function signin() 
+    public function signin($username, $password) 
     {
         $data = array(
-        	'name' => 'test100',
-            'password' => 'a123456',
+        	'name' => $username,
+            'password' => $password,
         );
         $api = ecjia_touch_manager::make()->api(ecjia_touch_api::USER_SIGNIN)->data($data);
         $res = $api->run();
@@ -21,11 +21,15 @@ class ecjia_touch_user extends RC_Object
         }
         
         $sid = array_get($res, 'session.sid');
-        
+//         _dump($sid);
         $minutes = RC_Config::get('cookie.lifetime');
-        $response = royalcms('response');
-        $response->withCookie(RC_Cookie::make(self::API_USER_COOKIE, $sid, $minutes));
+//         $response = royalcms('response');
+//         $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $sid));
         
+        
+        
+        setcookie('ecjia_api_token', $sid, SYS_TIME+$minutes*60, RC_Config::get('cookie.path'));
+//         _dump($sid,1);
         $this->cacheUserinfo($sid, array_get($res, 'user'));
         
         return array_get($res, 'user');
@@ -43,7 +47,7 @@ class ecjia_touch_user extends RC_Object
         $cache_key = 'api_request_user_info::' . RC_Cookie::get(self::API_USER_COOKIE);
         
         $data = RC_Cache::app_cache_get($cache_key, 'touch');
-
+        
         return $data ?: array();
     }
     
