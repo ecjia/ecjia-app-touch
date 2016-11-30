@@ -93,6 +93,7 @@ class ecjia_touch_api
  	const USER_ACCOUNT_RAPLY  = 'user/account/raply';//用户提现申请
  	const USER_ACCOUNT_CANCEL = 'user/account/cancel';//用户申请取消
  	const USER_ACCOUNT_UPDATE = 'user/account/update';//修改会员账户信息
+ 	const USER_BONUS          = 'user/bonus';//会员红包列表
  	const VALIDATE_BIND       = 'validate/bind';//验证用户绑定注册
  	const VALIDATE_BONUS      = 'validate/bonus';//验证红包
  	const VALIDATE_INTEGRAL   = 'validate/integral';//验证积分
