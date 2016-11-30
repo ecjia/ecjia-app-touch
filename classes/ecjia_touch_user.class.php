@@ -21,16 +21,10 @@ class ecjia_touch_user extends RC_Object
         }
         
         $sid = array_get($res, 'session.sid');
-//         _dump($sid,1);
-//         $minutes = RC_Config::get('cookie.lifetime');
+        
         $response = royalcms('response');
         $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $sid));
-        
-//         RC_Cookie::forever(self::API_USER_COOKIE, $sid);
-        
-        
-//         setcookie('ecjia_api_token', $sid, SYS_TIME+$minutes*60, RC_Config::get('cookie.path'));
-//         _dump($response->headers,1);
+
         $this->cacheUserinfo($sid, array_get($res, 'user'));
         
         return array_get($res, 'user');
@@ -52,6 +46,13 @@ class ecjia_touch_user extends RC_Object
         return $data ?: array();
     }
     
+    protected function removeCacheUserinfo()
+    {
+        $cache_key = 'api_request_user_info::' . RC_Cookie::get(self::API_USER_COOKIE);
+        
+        RC_Cache::app_cache_delete($cache_key, 'touch');
+    }
+    
     
     /**
      * 检查是否登录
@@ -71,7 +72,13 @@ class ecjia_touch_user extends RC_Object
      */
     public function signout()
     {
+        $data = array(
+            'token' => $this->getToken(),
+        );
+        $api = ecjia_touch_manager::make()->api(ecjia_touch_api::USER_SIGNIN)->data($data);
+        $res = $api->run();
         
+        $this->removeCacheUserinfo();
     }
     
     /**
