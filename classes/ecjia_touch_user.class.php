@@ -3,7 +3,7 @@
 class ecjia_touch_user extends RC_Object
 {
     
-    const API_USER_COOKIE = 'api_token';
+    const API_USER_COOKIE = 'ecjia_api_token';
     
     /**
      * 登录
