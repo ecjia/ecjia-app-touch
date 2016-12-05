@@ -51,6 +51,7 @@ class ecjia_touch_api
  	const CART_DELETE		= 'cart/delete'; //从购物车中删除商品
  	const CART_LIST			= 'cart/list';//购物车列表
  	const CART_UPDATE		= 'cart/update';//购物车更新商品数目
+ 	const CART_CHECKED		= 'cart/checked';//购物车更新选中状态
  	const FLOW_CHECKORDER 	= 'flow/checkOrder';//购物流检查订单
  	const FLOW_DONE			= 'flow/done';//购物流完成
  	
