@@ -112,6 +112,12 @@ class ecjia_touch_api
  	const USER_SEND_PWDMAIL   = 'user/send_pwdmail';//邮箱找回密码/测试
  	const USER_SIGNUPFIELDS   = 'user/signupFields';//用户注册字段
  	const USER_USERBIND       = 'user/userbind';//手机快速注册
+ 	
+ 	//==============================================
+ 	// 推广
+ 	//==============================================
+ 	const INVITE_USER       = 'invite/user';//推荐用户信息
+ 	
 
  	//==============================================
  	// 关联
