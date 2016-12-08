@@ -129,9 +129,9 @@ class admin_navigator extends ecjia_admin {
 
 		//插入新菜单
 		if (ecjia_config::instance()->write_config('navigator_data', serialize($list))) {
-			$this->showmessage('成功保存修改！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('pjaxurl'=>RC_Uri::url('touch/admin_navigator/init')));
+			return $this->showmessage('成功保存修改！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('pjaxurl'=>RC_Uri::url('touch/admin_navigator/init')));
 		} else {
-			$this->showmessage('保存修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+			return $this->showmessage('保存修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
 		}
 	}
 
@@ -146,11 +146,11 @@ class admin_navigator extends ecjia_admin {
 		if(!empty($icon)){
 			/* 检查上传的文件类型是否合法 */
 			if (!$upload->check_upload_file($icon)) {
-				$this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+				return $this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
 			}else{
 				$image_info = $upload->upload($_FILES['iconimg']);
 				if (empty($image_info)) {
-					$this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+					return $this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
 				}
 				$icon_img = $upload->get_position($image_info);
 			}
@@ -187,7 +187,7 @@ class admin_navigator extends ecjia_admin {
 		}else{
 			$db_nav->insert($data);
 		}
-		$this->showmessage('保存导航成功！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS,array('iconimg' =>$icon_img));
+		return $this->showmessage('保存导航成功！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS,array('iconimg' =>$icon_img));
 	}
 
 	/**
@@ -209,7 +209,7 @@ class admin_navigator extends ecjia_admin {
 			$disk = RC_Filesystem::disk();
 			$disk->delete($path);
 		}
-		$this->showmessage('图片删除成功！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS,array('pjaxurl'=>RC_Uri::url('touch/admin_navigator/init')));
+		return $this->showmessage('图片删除成功！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS,array('pjaxurl'=>RC_Uri::url('touch/admin_navigator/init')));
 	}
 	/**
 	 * 菜单栏列表Ajax
@@ -222,7 +222,7 @@ class admin_navigator extends ecjia_admin {
 		$this->assign('filter',       $navdb['filter']);
 		$this->assign('record_count', $navdb['record_count']);
 		$this->assign('page_count',   $navdb['page_count']);
-		$this->showmessage($this->fetch_string('navigator.dwt'), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('filter' => $navdb['filter'], 'page_count' => $navdb['page_count']));
+		return $this->showmessage($this->fetch_string('navigator.dwt'), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('filter' => $navdb['filter'], 'page_count' => $navdb['page_count']));
 	}
 
 	/**
