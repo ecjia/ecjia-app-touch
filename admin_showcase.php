@@ -93,9 +93,9 @@ class admin_showcase extends ecjia_admin {
         $template = $_POST['tpl'];
         $html = stripslashes($_POST['html']);
         if(update_library($template,$html)){
-            $this->showmessage('更新成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
+            return $this->showmessage('更新成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
         }
-        $this->showmessage('编辑失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
+        return $this->showmessage('编辑失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
     }
 
     /**
@@ -114,9 +114,9 @@ class admin_showcase extends ecjia_admin {
         $file  = $library_dir.'showcase_'.$file_name;
         $fp = fopen($file,'x');
         if(fwrite($fp,$content)){
-            $this->showmessage('添加成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
+            return $this->showmessage('添加成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
         }
-        $this->showmessage('添加失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
+        return $this->showmessage('添加失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
 
     }
 
@@ -129,10 +129,10 @@ class admin_showcase extends ecjia_admin {
         $theme_dir = SITE_THEME_PATH . $curr_theme . DIRECTORY_SEPARATOR;
         $library_dir = $theme_dir. 'library' . DIRECTORY_SEPARATOR;
         if(!file_exists($library_dir.$template.'.lbi.php')){
-            $this->showmessage('请指定要删除的橱窗模板',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_ERROR);
+            return $this->showmessage('请指定要删除的橱窗模板',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_ERROR);
         }else{
             unlink($library_dir.$template.'.lbi.php');
         }
-        $this->showmessage('文件已成功删除',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_SUCCESS);
+        return $this->showmessage('文件已成功删除',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_SUCCESS);
     }
 }

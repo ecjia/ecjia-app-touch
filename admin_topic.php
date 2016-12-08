@@ -111,9 +111,9 @@ class admin_topic extends ecjia_admin {
         $data = array('template' => $template);
         $db_topic_model->where(array('topic_id' => $topic))->update($data);
         if(update_library($template,stripslashes(htmlspecialchars_decode($html)))){
-            $this->showmessage('更新成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
+            return $this->showmessage('更新成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
         }
-        $this->showmessage('编辑失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
+        return $this->showmessage('编辑失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
     }
 
     /**
@@ -136,9 +136,9 @@ class admin_topic extends ecjia_admin {
         $data = array('template' => $data.$file_name);
         $db_topic_model->where(array('topic_id' => $topic))->update($data);
         if(fwrite($fp,stripslashes(htmlspecialchars_decode($content)))){
-            $this->showmessage('添加成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
+            return $this->showmessage('添加成功',ecjia_admin::MSGSTAT_SUCCESS| ecjia_admin::MSGTYPE_JSON);
         }
-        $this->showmessage('添加失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
+        return $this->showmessage('添加失败',ecjia_admin::MSGSTAT_ERROR| ecjia_admin::MSGTYPE_JSON);
     }
 
     /**
@@ -150,11 +150,11 @@ class admin_topic extends ecjia_admin {
         $theme_dir = SITE_THEME_PATH . $curr_theme . DIRECTORY_SEPARATOR;
         $library_dir = $theme_dir. 'library' . DIRECTORY_SEPARATOR.'topic'. DIRECTORY_SEPARATOR;
         if(!file_exists($library_dir.$template)){
-            $this->showmessage('请指定要删除的橱窗模板',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_ERROR);
+            return $this->showmessage('请指定要删除的橱窗模板',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_ERROR);
         }else{
             unlink($library_dir.$template);
         }
-        $this->showmessage('文件已成功删除',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_SUCCESS);
+        return $this->showmessage('文件已成功删除',ecjia_admin::MSGTYPE_JSON | ecjia_admin::MSGSTAT_SUCCESS);
     }
 }
 

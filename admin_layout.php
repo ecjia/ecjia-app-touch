@@ -96,7 +96,7 @@ class admin_layout extends ecjia_admin {
      * 更新文件
      */
     public function update(){
-        if (empty($_REQUEST['template_file'])) $this->showmessage('缺少模板参数，修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+        if (empty($_REQUEST['template_file'])) return $this->showmessage('缺少模板参数，修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
         $curr_template  = $_REQUEST['template_file'];
 
         $post_regions = array();
@@ -152,11 +152,11 @@ class admin_layout extends ecjia_admin {
             $this->clear_compiled_files();
             RC_Dir::delete(SITE_CACHE_PATH . 'temp' . DS . 'table_caches');
 
-            $this->showmessage('修改成功!', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS);
+            return $this->showmessage('修改成功!', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS);
         }
         else
         {
-            $this->showmessage('修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+            return $this->showmessage('修改失败！', ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
         }
     }
 }

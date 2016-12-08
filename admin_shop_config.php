@@ -137,7 +137,7 @@ class admin_shop_config extends ecjia_admin {
 					);
 					$this->db->where(array('code'=>$code))->update($data);
 				} else {
-					$this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
+					return $this->showmessage($upload->error(), ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_ERROR);
 				}
 			}
 		}
@@ -175,7 +175,7 @@ class admin_shop_config extends ecjia_admin {
 			$message_info = __('保存商店设置成功。');
 		}
 
-		$this->showmessage($message_info , ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS);
+		return $this->showmessage($message_info , ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS);
 	}
 
 	/**
@@ -193,7 +193,7 @@ class admin_shop_config extends ecjia_admin {
 		$this->update_configure($code, '');
 		ecjia_admin::admin_log('', 'edit', 'shop_config');
 
-		$this->showmessage(__('保存商店设置成功。') , ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('pjaxurl' => RC_Uri::url('touch/admin_shop_config/init')));
+		return $this->showmessage(__('保存商店设置成功。') , ecjia::MSGTYPE_JSON | ecjia::MSGSTAT_SUCCESS, array('pjaxurl' => RC_Uri::url('touch/admin_shop_config/init')));
 	}
 
 	/**
