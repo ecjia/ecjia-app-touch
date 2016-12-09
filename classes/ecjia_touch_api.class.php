@@ -117,7 +117,9 @@ class ecjia_touch_api
  	// 推广
  	//==============================================
  	const INVITE_USER       = 'invite/user';//推荐用户信息
- 	
+ 	const INVITE_REWARD       = 'invite/reward';//获取我所推荐的统计
+ 	const INVITE_RECORD       = 'invite/record';//奖励记录
+ 	const INVITE_VALIDATE       = 'invite/validate';//邀请码
 
  	//==============================================
  	// 关联
