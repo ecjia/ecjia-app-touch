@@ -27,7 +27,7 @@ class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
 
     public function serverHost() {
         // return RC_Uri::home_url() . static::serverHost;
-        return 'http://cityo2o.ecjia.com' . static::serverHost;
+        return 'https://cityo2o.ecjia.com' . static::serverHost;
     }
 
 
