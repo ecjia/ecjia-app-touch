@@ -20,14 +20,17 @@ class ecjia_touch_user extends RC_Object
             return $api->getError();
         }
         
+        $this->setUserinfo($res);
+        
+        return array_get($res, 'user');
+    }
+    public function setUserinfo($res) {
         $sid = array_get($res, 'session.sid');
         
         $response = royalcms('response');
         $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $sid));
-
-        $this->cacheUserinfo($sid, array_get($res, 'user'));
         
-        return array_get($res, 'user');
+        $this->cacheUserinfo($sid, array_get($res, 'user'));
     }
     
     protected function cacheUserinfo($cookieid, $user) 
