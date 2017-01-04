@@ -16,6 +16,8 @@ class touch {
     const STORAGEKEY_ipad_download      = 'shop_ipad_download';
     const STORAGEKEY_app_icon           = 'shop_app_icon';
     const STORAGEKEY_app_description    = 'shop_app_description';
+    
+    const STORAGEKEY_map_qq_key   		= 'map_qq_key';
 }
 
 // end
