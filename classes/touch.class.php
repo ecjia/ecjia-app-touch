@@ -1,8 +1,9 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
+
 /**
  * ecjia touch 主类
  */
-defined('IN_ECJIA') or exit('No permission resources.');
 
 class touch {
     //预设配置项存储key

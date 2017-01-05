@@ -1,7 +1,10 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
+
 /**
  * touch共用功能加载
  */
+ 
 function touch_common_loading() {
 
 	/* 商店关闭了，输出关闭的消息 */
@@ -130,7 +133,6 @@ RC_Hook::add_action('class_api_merchant_goods_suggestlist_model',  function () {
 RC_Hook::add_action('class_api_merchant_goods_suggestlist_model',  function () {RC_Package::package('app::touch')->loadModel('merchant.api_merchant_home_data_model', false);});
 
 
-
 RC_Hook::add_action('class_api_order_affirmReceived_model',        function () {RC_Package::package('app::touch')->loadModel('order.api_order_affirmReceived_model', false);});
 RC_Hook::add_action('class_api_order_cancel_model',                function () {RC_Package::package('app::touch')->loadModel('order.api_order_cancel_model', false);});
 RC_Hook::add_action('class_api_order_detail_model',                function () {RC_Package::package('app::touch')->loadModel('order.api_order_detail_model', false);});
@@ -149,7 +151,6 @@ RC_Hook::add_action('class_api_seller_list_model',                 function () {
 RC_Hook::add_action('class_api_seller_search_model',               function () {RC_Package::package('app::touch')->loadModel('seller.api_seller_search_model', false);});
 
 
-
 RC_Hook::add_action('class_api_connect_bind_model',                function () {RC_Package::package('app::touch')->loadModel('user.api_connect_bind_model', false);});
 RC_Hook::add_action('class_api_connect_signin_model',              function () {RC_Package::package('app::touch')->loadModel('user.api_connect_signin_model', false);});
 RC_Hook::add_action('class_api_connect_signup_model',              function () {RC_Package::package('app::touch')->loadModel('user.api_connect_signup_model', false);});
@@ -162,9 +163,11 @@ RC_Hook::add_action('class_api_user_account_pay_model',            function () {
 RC_Hook::add_action('class_api_user_account_pay_model',            function () {RC_Package::package('app::touch')->loadModel('user.api_user_account_record_model', false);});
 RC_Hook::add_action('class_api_user_account_update_model',         function () {RC_Package::package('app::touch')->loadModel('user.api_user_account_update_model', false);});
 
+
 RC_Hook::add_action('class_api_user_account_update_model',         function () {RC_Package::package('app::touch')->loadModel('user.api_user_collect_create_model', false);});
 RC_Hook::add_action('class_api_user_collect_delete_model',         function () {RC_Package::package('app::touch')->loadModel('user.api_user_collect_delete_model', false);});
 RC_Hook::add_action('class_api_user_collect_delete_model',         function () {RC_Package::package('app::touch')->loadModel('user.api_user_collect_list_model', false);});
+
 
 RC_Hook::add_action('class_api_user_collect_delete_model',         function () {RC_Package::package('app::touch')->loadModel('user.api_user_forget_password_model', false);});
 RC_Hook::add_action('class_api_user_info_model',                   function () {RC_Package::package('app::touch')->loadModel('user.api_user_info_model', false);});
@@ -177,6 +180,7 @@ RC_Hook::add_action('class_api_user_signup_model',                 function () {
 RC_Hook::add_action('class_api_user_signup_model',                 function () {RC_Package::package('app::touch')->loadModel('user.api_user_signupFields_model', false);});
 RC_Hook::add_action('class_api_user_snsbind_model',                function () {RC_Package::package('app::touch')->loadModel('user.api_user_snsbind_model', false);});
 RC_Hook::add_action('class_api_user_snsbind_model',                function () {RC_Package::package('app::touch')->loadModel('user.api_user_update_model', false);});
+
 
 RC_Hook::add_action('class_api_validate_account_model',            function () {RC_Package::package('app::touch')->loadModel('user.api_validate_account_model', false);});
 RC_Hook::add_action('class_api_validate_account_model',            function () {RC_Package::package('app::touch')->loadModel('user.api_validate_bind_model', false);});
@@ -194,5 +198,5 @@ RC_Hook::add_action('class_api_goods_seller_list_model',           function () {
 RC_Hook::add_action('class_api_goods_seller_list_model',           function () {RC_Package::package('app::touch')->loadModel('goods.api_goods_desc_model', false);});
 RC_Hook::add_action('class_api_goods_filter_model',                function () {RC_Package::package('app::touch')->loadModel('goods.api_goods_filter_model', false);});
 
-
+// end
 

@@ -1,5 +1,6 @@
 <?php
 defined('IN_ECJIA') or exit('No permission resources.');
+
 /* 用户登录语言项 */
 $LANG['empty_username_password'] = '对不起，您必须完整填写用户名和密码。';
 $LANG['shot_message'] = "短消息";
@@ -1021,7 +1022,8 @@ $LANG['bonus_sn_error'] = '该红包序列号不正确';
 $LANG['bonus_min_amount_error'] = '订单商品金额没有达到使用该红包的最低金额 %s';
 $LANG['bonus_is_ok'] = '该红包序列号可以使用，可以抵扣 %s';
 
-
 $LANG['shopping_myship'] = '我的配送';
 $LANG['shopping_activity'] = '活动列表';
 $LANG['shopping_package'] = '超值礼包列表';
+
+//end

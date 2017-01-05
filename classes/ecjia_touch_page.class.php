@@ -1,9 +1,11 @@
 <?php
 defined('IN_ECJIA') or exit('No permission resources.');
+
 /**
  * 分页处理类
  * @package     Core
  */
+ 
 class ecjia_touch_page extends ecjia_page {
 
 	/**
@@ -55,7 +57,6 @@ class ecjia_touch_page extends ecjia_page {
 		$this->page_row = is_null($page_row)? $this->page_row : $page_row - 1;
 
 		return '<div class="ecjia-page ecjia-margin-b">' . $this->pre() . $this->now_page() . $this->next()  . '</div>';
-
 	}
 }
 

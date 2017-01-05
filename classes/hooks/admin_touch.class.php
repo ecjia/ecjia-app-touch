@@ -12,10 +12,8 @@ class touch_admin_hooks {
        
        return $menus;
    }
-    
 }
 
 RC_Hook::add_action( 'append_admin_setting_group', array('touch_admin_hooks', 'append_admin_setting_group') );
-
 
 // end

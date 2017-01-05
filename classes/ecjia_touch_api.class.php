@@ -1,4 +1,5 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
 
 class ecjia_touch_api 
 {
@@ -6,12 +7,12 @@ class ecjia_touch_api
 	//==============================================
 	// 商店配置
 	//==============================================
-    const SHOP_CONFIG  = 'shop/config';//商店配置
-	const SHOP_TOKEN   = 'shop/token';//获取token信息
-	const SHOP_PAYMENT = 'shop/payment'; //支付方式
-	const SHOP_REGION  = 'shop/region';//地区
-	const SHOP_HELP	   = 'shop/help';//商店帮助分类列表
-	const SHOP_INFO	   = 'shop/info';//网店信息
+    const SHOP_CONFIG      = 'shop/config';//商店配置
+	const SHOP_TOKEN       = 'shop/token';//获取token信息
+	const SHOP_PAYMENT     = 'shop/payment'; //支付方式
+	const SHOP_REGION      = 'shop/region';//地区
+	const SHOP_HELP	       = 'shop/help';//商店帮助分类列表
+	const SHOP_INFO	       = 'shop/info';//网店信息
 	const SHOP_HELP_DETAIL = 'shop/help/detail';//商店帮助内容
 	const SHOP_INFO_DETAIL = 'shop/info/detail';//网店信息内容
 	const SHOP_SERVER      = 'shop/server';//服务器环境信息
@@ -19,20 +20,20 @@ class ecjia_touch_api
     //==============================================
     // 首页
     //==============================================
-    const HOME_CATEGORY = 'home/category';//HOME分类
-    const HOME_DATA 	= 'home/data';//HOME数据
-    const HOME_ADSENSE  = 'home/adsense';//HOME广告
-    const HOME_DISCOVER = 'home/discover';//discover数据
-    const HOME_NEWS 	= 'home/news';//今日热点数据
+    const HOME_CATEGORY    = 'home/category';//HOME分类
+    const HOME_DATA 	   = 'home/data';//HOME数据
+    const HOME_ADSENSE     = 'home/adsense';//HOME广告
+    const HOME_DISCOVER    = 'home/discover';//discover数据
+    const HOME_NEWS 	   = 'home/news';//今日热点数据
     
     //==============================================
     // 收货地址
     //==============================================
-    const ADDRESS_ADD    = 'address/add'; // 添加地址
-    const ADDRESS_DELETE = 'address/delete'; // 删除地址
-    const ADDRESS_INFO   = 'address/info'; // 单条地址信息
-    const ADDRESS_LIST   = 'address/list'; // 所有地址列表
-    const ADDRESS_UPDATE = 'address/update'; // 更新单条地址信息
+    const ADDRESS_ADD        = 'address/add'; // 添加地址
+    const ADDRESS_DELETE     = 'address/delete'; // 删除地址
+    const ADDRESS_INFO       = 'address/info'; // 单条地址信息
+    const ADDRESS_LIST       = 'address/list'; // 所有地址列表
+    const ADDRESS_UPDATE     = 'address/update'; // 更新单条地址信息
     const ADDRESS_SETDEFAULT = 'address/setDefault'; // 设置默认地址
     
     //==============================================
@@ -70,13 +71,13 @@ class ecjia_touch_api
  	// 订单
  	//==============================================
  	const ORDER_AFFIRMRECEIVED = 'order/affirmReceived';//订单确认收货
- 	const ORDER_CANCEL	 = 'order/cancel';//订单取消
- 	const ORDER_LIST	 = 'order/list';//订单列表
- 	const ORDER_PAY		 = 'order/pay';//订单支付
- 	const ORDER_DETAIL	 = 'order/detail';//订单详情
- 	const ORDER_REMINDER = 'order/reminder'; //提醒卖家发货
- 	const ORDER_UPDATE	 = 'order/update';//订单更新
- 	const ORDER_EXPRESS  = 'order/express';//订单快递
+ 	const ORDER_CANCEL	       = 'order/cancel';//订单取消
+ 	const ORDER_LIST	       = 'order/list';//订单列表
+ 	const ORDER_PAY		       = 'order/pay';//订单支付
+ 	const ORDER_DETAIL	       = 'order/detail';//订单详情
+ 	const ORDER_REMINDER       = 'order/reminder'; //提醒卖家发货
+ 	const ORDER_UPDATE	       = 'order/update';//订单更新
+ 	const ORDER_EXPRESS        = 'order/express';//订单快递
  	
  	//==============================================
  	// 用户
@@ -116,10 +117,10 @@ class ecjia_touch_api
  	//==============================================
  	// 推广
  	//==============================================
- 	const INVITE_USER       = 'invite/user';//推荐用户信息
+ 	const INVITE_USER         = 'invite/user';//推荐用户信息
  	const INVITE_REWARD       = 'invite/reward';//获取我所推荐的统计
  	const INVITE_RECORD       = 'invite/record';//奖励记录
- 	const INVITE_VALIDATE       = 'invite/validate';//邀请码
+ 	const INVITE_VALIDATE     = 'invite/validate';//邀请码
 
  	//==============================================
  	// 关联
@@ -142,5 +143,6 @@ class ecjia_touch_api
  	const MERCHANT_GOODS_CATEGORY    = 'merchant/goods/category';//商店分类
  	const MERCHANT_GOODS_LIST 		 = 'merchant/goods/list';//商店商品
  	const MERCHANT_GOODS_SUGGESTLIST = 'merchant/goods/suggestlist';//商店推荐商品
- 	   
 }
+
+// end

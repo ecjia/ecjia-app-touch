@@ -3,8 +3,8 @@ defined('IN_ECJIA') or exit('No permission resources.');
 
 $LANG['require_login'] = '非法入口。<br />必须登录才能完成操作。';
 
-$LANG['no_records'] = '没有记录';
-$LANG['shot_message'] = "短消息";
+$LANG['no_records']    = '没有记录';
+$LANG['shot_message']  = "短消息";
 
 /* 用户菜单 */
 $LANG['label_welcome'] = '欢迎页';

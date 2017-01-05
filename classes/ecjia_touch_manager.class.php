@@ -1,13 +1,14 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
+
 /**
  * ecjia touch manager API管理类
  * @author royalwang
  *
  */
+ 
 class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
 {
-
-
     /**
      * 服务器地址
      * @var serverHost
@@ -29,10 +30,6 @@ class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
         // return RC_Uri::home_url() . static::serverHost;
         return 'https://cityo2o.ecjia.com' . static::serverHost;
     }
-
-
-
-
 }
 
 // end

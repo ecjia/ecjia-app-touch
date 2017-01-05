@@ -1,9 +1,9 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
 
 /**
  * API入口应用
  */
-defined('IN_ECJIA') or exit('No permission resources.');
 
 return array(
     'identifier'    => 'ecjia.touch',

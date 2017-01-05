@@ -13,7 +13,6 @@ class touch_installer  extends ecjia_installer {
         parent::__construct($id);
     }
 
-
     public function install() {
         if (!ecjia::config(touch::STORAGEKEY_template, ecjia::CONFIG_CHECK)) {
             ecjia_config::instance()->insert_config('hidden', touch::STORAGEKEY_template, '', array('type' => 'hidden'));
@@ -50,7 +49,6 @@ class touch_installer  extends ecjia_installer {
         return true;
     }
 
-
     public function uninstall() {
 
         if (ecjia::config(touch::STORAGEKEY_template, ecjia::CONFIG_CHECK)) {
@@ -84,7 +82,6 @@ class touch_installer  extends ecjia_installer {
 
         return true;
     }
-
 }
 
 // end

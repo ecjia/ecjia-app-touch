@@ -169,8 +169,6 @@ class touch_theme {
 	    return $library_data;
 	}
 
-
-
 	/**
 	 * 获得模版文件中的编辑区域及其内容
 	 *
@@ -248,7 +246,6 @@ class touch_theme {
 	    return $edit_libs;
 	}
 
-
 	/**
 	 * 获得指定库项目在模板中的设置内容
 	 *
@@ -268,10 +265,8 @@ class touch_theme {
 	            break;
 	        }
 	    }
-
 	    return $options;
 	}
-
 
 	// /**
 	//  * 载入库项目内容
@@ -403,7 +398,6 @@ class touch_theme {
 	// 	return $info;
 	// }
 
-
 	/**
 	 * 读取模板风格列表
 	 *
@@ -471,8 +465,6 @@ class touch_theme {
 		// }
 	}
 
-
-
 	// /**
 	//  * 获取指定主题某个模板的主题的动态模块
 	//  *
@@ -507,8 +499,6 @@ class touch_theme {
 	// 	return $dyna_libs;
 	// }
 
-
-
 	// /**
 	//  * 获得可用的主题
 	//  */
@@ -532,7 +522,6 @@ class touch_theme {
     //
 	// 	return $available_themes;
 	// }
-
 
 	// /**
 	//  * 清除不需要的模板设置
@@ -564,7 +553,6 @@ class touch_theme {
 	// 	}
 	// 	closedir($tmp_bak_dir);
 	// }
-
 }
 
 // end

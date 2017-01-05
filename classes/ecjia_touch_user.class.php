@@ -1,4 +1,5 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
 
 class ecjia_touch_user extends RC_Object
 {
@@ -56,7 +57,6 @@ class ecjia_touch_user extends RC_Object
         RC_Cache::app_cache_delete($cache_key, 'touch');
     }
     
-    
     /**
      * 检查是否登录
      */
@@ -96,8 +96,6 @@ class ecjia_touch_user extends RC_Object
     {
         return $this->getCacheUserinfo();
     }
-    
-    
 }
 
 // end

@@ -1,8 +1,9 @@
 <?php
+defined('IN_ECJIA') or exit('No permission resources.');
+
 /**
  * ECJIA 管理中心商店设置
  */
-defined('IN_ECJIA') or exit('No permission resources.');
 
 class admin_shop_config extends ecjia_admin {
 	private $db;
@@ -151,8 +152,8 @@ class admin_shop_config extends ecjia_admin {
 				$_POST['invoice_rate'][$key] = $rate;
 			}
 			$invoice = array(
-					'type' => $_POST['invoice_type'],
-					'rate' => $_POST['invoice_rate']
+					'type'  => $_POST['invoice_type'],
+					'rate'  => $_POST['invoice_rate']
 			);
 			$data  = array(
 					'value' => serialize($invoice)
@@ -274,7 +275,6 @@ class admin_shop_config extends ecjia_admin {
 				}
 			}
 		}
-
 		return $group_list;
 	}
 
