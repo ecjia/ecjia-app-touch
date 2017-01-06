@@ -4,7 +4,6 @@ defined('IN_ECJIA') or exit('No permission resources.');
 /**
  * ECJIA 管理中心商店设置
  */
-
 class admin_shop_config extends ecjia_admin {
 	private $db;
 	private $db_region;

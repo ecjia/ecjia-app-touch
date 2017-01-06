@@ -4,7 +4,6 @@ defined('IN_ECJIA') or exit('No permission resources.');
 /**
  * touch共用功能加载
  */
- 
 function touch_common_loading() {
 
 	/* 商店关闭了，输出关闭的消息 */
@@ -199,4 +198,3 @@ RC_Hook::add_action('class_api_goods_seller_list_model',           function () {
 RC_Hook::add_action('class_api_goods_filter_model',                function () {RC_Package::package('app::touch')->loadModel('goods.api_goods_filter_model', false);});
 
 // end
-

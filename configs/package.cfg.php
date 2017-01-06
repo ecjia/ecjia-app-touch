@@ -4,7 +4,6 @@ defined('IN_ECJIA') or exit('No permission resources.');
 /**
  * API入口应用
  */
-
 return array(
     'identifier'    => 'ecjia.touch',
     'directory'     => 'touch',

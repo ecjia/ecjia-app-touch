@@ -1,3 +1,4 @@
+// JavaScript Document
 ;(function(admin, $) {
 	admin.admin_nav = {
 		init : function() {
@@ -216,3 +217,5 @@
 		}
 	};
 })(ecjia.admin, $);
+
+//end

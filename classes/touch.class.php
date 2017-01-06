@@ -4,7 +4,6 @@ defined('IN_ECJIA') or exit('No permission resources.');
 /**
  * ecjia touch 主类
  */
-
 class touch {
     //预设配置项存储key
     const STORAGEKEY_template   = 'touch_template';

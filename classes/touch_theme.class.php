@@ -70,9 +70,9 @@ class touch_theme {
 		        	$template_data = $this->get_template_info($this->theme_dir . $file);
 
 		        	if (!empty($template_data['Libraries'])) {
-		        	    $arr_template[$filename]['File'] = $file;
-		        	    $arr_template[$filename]['Name'] = $template_data['Name'];
-		        	    $arr_template[$filename]['Description'] = $template_data['Description'];
+		        	    $arr_template[$filename]['File']         = $file;
+		        	    $arr_template[$filename]['Name']         = $template_data['Name'];
+		        	    $arr_template[$filename]['Description']  = $template_data['Description'];
 		        	}
 
 		        }
@@ -88,9 +88,9 @@ class touch_theme {
      */
 	public function get_template_info($file) {
 	    $default_headers = array(
-	        'Name' => 'Name',
-	        'Description' => 'Description',
-	        'Libraries' => 'Libraries',
+	        'Name'         => 'Name',
+	        'Description'  => 'Description',
+	        'Libraries'    => 'Libraries',
 	    );
 
 	    $template_data = RC_File::get_file_data( $file, $default_headers, 'template' );
@@ -120,10 +120,10 @@ class touch_theme {
 		if($library_handle){
 			while (false !== ($file = readdir($library_handle))) {
 				if (substr($file, -7) == 'lbi.php') {
-					$filename      			= substr($file, 0, -8);
-					$library_data = $this->get_library_info($this->library_dir . $file);
-	                $arr_library[$filename]['File'] = $file;
-	                $arr_library[$filename]['Name'] = $library_data['Name'];
+					$filename      			               = substr($file, 0, -8);
+					$library_data                          = $this->get_library_info($this->library_dir . $file);
+	                $arr_library[$filename]['File']        = $file;
+	                $arr_library[$filename]['Name']        = $library_data['Name'];
 	                $arr_library[$filename]['Description'] = $library_data['Description'];
 				}
 			}
@@ -143,10 +143,10 @@ class touch_theme {
 		if($library_handle){
 			while (false !== ($file = readdir($library_handle))) {
 				if (substr($file, -7) == 'lbi.php' && substr($file, 0, 9) == 'showcase_') {
-					$filename      			= substr($file, 0, -8);
-					$library_data = $this->get_library_info($this->library_dir . $file);
-	                $arr_library[$filename]['File'] = DIRECTORY_SEPARATOR . 'library' . DIRECTORY_SEPARATOR . rtrim($file, '.php');
-	                $arr_library[$filename]['Name'] = $library_data['Name'];
+					$filename      			               = substr($file, 0, -8);
+					$library_data                          = $this->get_library_info($this->library_dir . $file);
+	                $arr_library[$filename]['File']        = DIRECTORY_SEPARATOR . 'library' . DIRECTORY_SEPARATOR . rtrim($file, '.php');
+	                $arr_library[$filename]['Name']        = $library_data['Name'];
 	                $arr_library[$filename]['Description'] = $library_data['Description'];
 				}
 			}
@@ -160,8 +160,8 @@ class touch_theme {
 	 */
 	public function get_library_info($file) {
 	    $default_headers = array(
-	        'Name' => 'Name',
-	        'Description' => 'Description',
+	        'Name'         => 'Name',
+	        'Description'  => 'Description',
 	    );
 
 	    $library_data = RC_File::get_file_data( $file, $default_headers, 'library' );

@@ -3,7 +3,6 @@ defined('IN_ECJIA') or exit('No permission resources.');
 
 /**
  * 载入自定义橱窗模板
- *
  * @access  public
  * @param   string  $curr_template  模版名称
  * @param   string  $lib_name       库项目名称
