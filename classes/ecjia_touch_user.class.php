@@ -46,16 +46,14 @@
 //
 defined('IN_ECJIA') or exit('No permission resources.');
 
-class ecjia_touch_user extends RC_Object
-{
+class ecjia_touch_user extends RC_Object {
     
     const API_USER_COOKIE = 'ecjia_api_token';
     
     /**
      * 登录
      */
-    public function signin($username, $password) 
-    {
+    public function signin($username, $password) {
         $data = array(
         	'name' => $username,
             'password' => $password,
@@ -79,15 +77,13 @@ class ecjia_touch_user extends RC_Object
         $this->cacheUserinfo($sid, array_get($res, 'user'));
     }
     
-    protected function cacheUserinfo($cookieid, $user) 
-    {
+    protected function cacheUserinfo($cookieid, $user) {
         $cache_key = 'api_request_user_info::' . $cookieid;
         
         RC_Cache::app_cache_set($cache_key, $user, 'touch');
     }
     
-    protected function getCacheUserinfo()
-    {
+    protected function getCacheUserinfo() {
         $cache_key = 'api_request_user_info::' . RC_Cookie::get(self::API_USER_COOKIE);
         
         $data = RC_Cache::app_cache_get($cache_key, 'touch');
@@ -95,8 +91,7 @@ class ecjia_touch_user extends RC_Object
         return $data ?: array();
     }
     
-    protected function removeCacheUserinfo()
-    {
+    protected function removeCacheUserinfo() {
         $cache_key = 'api_request_user_info::' . RC_Cookie::get(self::API_USER_COOKIE);
         
         RC_Cache::app_cache_delete($cache_key, 'touch');
@@ -105,8 +100,7 @@ class ecjia_touch_user extends RC_Object
     /**
      * 检查是否登录
      */
-    public function isSignin() 
-    {
+    public function isSignin() {
         $user = $this->getCacheUserinfo();
         if (array_get($user, 'id') > 0 && array_get($user, 'name')) {
             return true;
@@ -118,8 +112,7 @@ class ecjia_touch_user extends RC_Object
     /**
      * 退出
      */
-    public function signout()
-    {
+    public function signout() {
         $data = array(
             'token' => $this->getToken(),
         );
@@ -132,13 +125,11 @@ class ecjia_touch_user extends RC_Object
     /**
      * 获取用户登录凭证
      */
-    public function getToken() 
-    {
+    public function getToken() {
         return RC_Cookie::get(self::API_USER_COOKIE);
     }
     
-    public function getUserinfo()
-    {
+    public function getUserinfo() {
         return $this->getCacheUserinfo();
     }
 }
