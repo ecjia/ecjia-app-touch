@@ -63,6 +63,7 @@ class touch {
 //     const STORAGEKEY_app_description    = 'shop_app_description';
     
     const STORAGEKEY_map_qq_key   		= 'map_qq_key';
+    const STORAGEKEY_map_qq_refere   	= 'map_qq_refere';
 }
 
 // end

@@ -88,11 +88,14 @@ class touch_installer  extends ecjia_installer {
 //             ecjia_config::instance()->insert_config('wap', touch::STORAGEKEY_app_description, '', array('type' => 'text', 'sort_order' => 7));
 //         }
 
+        if (!ecjia::config(touch::STORAGEKEY_map_qq_refere, ecjia::CONFIG_CHECK)) {
+        	ecjia_config::instance()->insert_config('wap', touch::STORAGEKEY_map_qq_refere, '', array('type' => 'text', 'sort_order' => 2));
+        }
         
         if (!ecjia::config(touch::STORAGEKEY_map_qq_key, ecjia::CONFIG_CHECK)) {
-        	ecjia_config::instance()->insert_config('wap', touch::STORAGEKEY_map_qq_key, '', array('type' => 'text', 'sort_order' => 8));
+        	ecjia_config::instance()->insert_config('wap', touch::STORAGEKEY_map_qq_key, '', array('type' => 'text', 'sort_order' => 3));
         }
-
+       
         return true;
     }
 
@@ -129,11 +132,14 @@ class touch_installer  extends ecjia_installer {
 //         }
         
         
+        if (ecjia::config(touch::STORAGEKEY_map_qq_refere, ecjia::CONFIG_CHECK)) {
+        	ecjia_config::instance()->delete_config(touch::STORAGEKEY_map_qq_refere);
+        }
         
         if (ecjia::config(touch::STORAGEKEY_map_qq_key, ecjia::CONFIG_CHECK)) {
         	ecjia_config::instance()->delete_config(touch::STORAGEKEY_map_qq_key);
         }
-
+       
         return true;
     }
 }
