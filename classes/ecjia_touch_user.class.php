@@ -80,7 +80,7 @@ class ecjia_touch_user extends RC_Object {
     protected function cacheUserinfo($cookieid, $user) {
         $cache_key = 'api_request_user_info::' . $cookieid;
         
-        RC_Cache::app_cache_set($cache_key, $user, 'touch');
+        RC_Cache::app_cache_set($cache_key, $user, 'touch', 60*24*7);
     }
     
     protected function getCacheUserinfo() {
