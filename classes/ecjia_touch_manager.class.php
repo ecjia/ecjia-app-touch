@@ -70,7 +70,7 @@ class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
     }
 
     public function serverHost() {
-        return RC_Hook::apply_filter('custom_site_api_url', RC_Uri::home_url() . static::serverHost);
+        return RC_Hook::apply_filters('custom_site_api_url', RC_Uri::home_url() . static::serverHost);
     }
 }
 
