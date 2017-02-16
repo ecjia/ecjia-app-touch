@@ -129,7 +129,7 @@ class admin_shop_config extends ecjia_admin {
 	 * 商店设置表单提交处理
 	 */
 	public function update() {
-		$this->admin_priv('touch_shop_config');
+		$this->admin_priv('touch_shop_config', ecjia::MSGTYPE_JSON);
 
 		$arr  = array();
 		$data = $this->db->field('id, value')->select();
@@ -227,7 +227,7 @@ class admin_shop_config extends ecjia_admin {
 	 * 删除上传文件
 	 */
 	public function del() {
-		$this->admin_priv('touch_shop_config');
+		$this->admin_priv('touch_shop_config', ecjia::MSGTYPE_JSON);
 
 		$code     = trim($_GET['code']);
 		$img_name = $this->db->where(array('code'=>$code))->get_field('value');
