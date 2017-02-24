@@ -116,7 +116,7 @@ class ecjia_touch_user extends RC_Object {
         $data = array(
             'token' => $this->getToken(),
         );
-        $api = ecjia_touch_manager::make()->api(ecjia_touch_api::USER_SIGNIN)->data($data);
+        $api = ecjia_touch_manager::make()->api(ecjia_touch_api::USER_SIGNOUT)->data($data);
         $res = $api->run();
         if (is_ecjia_error($res)) {
             return $api->getError();
