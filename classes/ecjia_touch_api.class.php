@@ -193,6 +193,8 @@ class ecjia_touch_api
  	const ADMIN_MERCHANT_SIGNUP     = 'admin/merchant/signup';//提交入驻信息
  	const ADMIN_MERCHANT_PROCESS    = 'admin/merchant/process';//查看进度
  	const ADMIN_MERCHANT_VALIDATE 	= 'admin/merchant/validate';//验证码
+ 	const ADMIN_MERCHANT_CANCEL 	= 'admin/merchant/cancel';//撤销申请
+ 	
 }
 
 // end
