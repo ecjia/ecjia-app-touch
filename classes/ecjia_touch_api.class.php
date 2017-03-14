@@ -193,6 +193,13 @@ class ecjia_touch_api
  	const ADMIN_MERCHANT_SIGNUP     = 'admin/merchant/signup';//提交入驻信息
  	const ADMIN_MERCHANT_PROCESS    = 'admin/merchant/process';//查看进度
  	const ADMIN_MERCHANT_VALIDATE 	= 'admin/merchant/validate';//验证码
+ 	
+ 	//==============================================
+ 	// 评论
+ 	//==============================================
+ 	const COMMENT_CREATE            = 'comment/create';//发布商品评论
+ 	const ORDERS_COMMENT            = 'orders/comment';//获取用户邀请信息
+ 	const ORDERS_COMMENT_DETAIL     = 'orders/comment/detail';//获取单个订单的评论详情
 }
 
 // end
