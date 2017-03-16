@@ -61,6 +61,7 @@ class ecjia_touch_api
 	const SHOP_HELP_DETAIL = 'shop/help/detail';//商店帮助内容
 	const SHOP_INFO_DETAIL = 'shop/info/detail';//网店信息内容
 	const SHOP_SERVER      = 'shop/server';//服务器环境信息
+	const SHOP_REGION_DETAIL = 'shop/region/detail';//根据城市名称查找城市id
     
     //==============================================
     // 首页
@@ -193,15 +194,10 @@ class ecjia_touch_api
  	const ADMIN_MERCHANT_SIGNUP     = 'admin/merchant/signup';//提交入驻信息
  	const ADMIN_MERCHANT_PROCESS    = 'admin/merchant/process';//查看进度
  	const ADMIN_MERCHANT_VALIDATE 	= 'admin/merchant/validate';//验证码
+ 	const ADMIN_MERCHANT_CANCEL 	= 'admin/merchant/cancel';//撤销申请
+ 	const ADMIN_MERCHANT_PREAUDIT 	= 'admin/merchant/preaudit';//获取入驻基本信息
+ 	const ADMIN_MERCHANT_RESIGNUP 	= 'admin/merchant/resignup';//入驻申请信息修改
  	
- 	//==============================================
- 	// 评论
- 	//==============================================
- 	const COMMENT_CREATE            = 'comment/create';//发布商品评论
- 	const ORDERS_COMMENT            = 'orders/comment';//获取用户邀请信息
- 	const ORDERS_COMMENT_DETAIL     = 'orders/comment/detail';//获取单个订单的评论详情
- 	
- 	const STORE_COMMENTS			= 'store/comments';
 }
 
 // end
