@@ -62,10 +62,10 @@ class ecjia_touch_manager extends Ecjia\System\Api\ApiManager
         parent::__construct();
 
         $this->header(array(
-        	'device_udid'     => '',
-            'device_client'   => 'html5',
+        	'device_udid'     => RC_Session::getId(),
+            'device_client'   => 'h5',
             'device_code'     => '6004',
-            'api_version'     => '1.2',
+            'api_version'     => '1.5',
         ));
     }
 
