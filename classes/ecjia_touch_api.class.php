@@ -205,7 +205,7 @@ class ecjia_touch_api
  	const ORDERS_COMMENT            = 'orders/comment';//获取用户邀请信息
  	const ORDERS_COMMENT_DETAIL     = 'orders/comment/detail';//获取单个订单的评论详情
  	
- 	const STORE_COMMENTS			= 'store/comments';
+ 	const STORE_COMMENTS			= 'store/comments';//店铺评论
  	
  	//==============================================
  	// 绑定手机号或邮箱
@@ -215,6 +215,9 @@ class ecjia_touch_api
  	
  	const SHOP_CAPTCHA_SMS	= 'shop/captcha/sms';//修改绑定手机
  	const SHOP_CAPTCHA_MAIL	= 'shop/captcha/mail';//修改绑定邮箱
+ 	
+ 	const ARTICLE_CATEGORY = 'article/category'; //文章分类
+ 	const ARTICLE_LIST     = 'article/list';//某一分类下的文章
 }
 
 // end
