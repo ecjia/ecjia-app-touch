@@ -221,6 +221,8 @@ class ecjia_touch_api
  	const ARTICLE_DETAIL   = 'article/detail';//文章详情
  	CONST ARTICLE_COMMENT_CREATE = 'article/comment/create';//添加文章评论
  	CONST ARTICLE_COMMENTS = 'article/comments';//文章评论列表
+ 	CONST ARTICLE_LIKE_ADD = 'article/like/add';//文章点赞
+ 	CONST ARTICLE_LIKE_CANCEL = 'article/like/cancel';//文章取消点赞
 }
 
 // end
