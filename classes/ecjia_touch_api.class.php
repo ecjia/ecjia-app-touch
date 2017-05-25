@@ -220,6 +220,7 @@ class ecjia_touch_api
  	const ARTICLE_LIST     = 'article/list';//某一分类下的文章
  	const ARTICLE_DETAIL   = 'article/detail';//文章详情
  	CONST ARTICLE_COMMENT_CREATE = 'article/comment/create';//添加文章评论
+ 	CONST ARTICLE_COMMENTS = 'article/comments';//文章评论列表
 }
 
 // end
