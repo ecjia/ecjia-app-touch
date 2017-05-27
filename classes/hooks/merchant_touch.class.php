@@ -54,8 +54,16 @@ class merchant_touch_hooks {
        $url = str_replace(RC_Uri::site_url(), RC_Uri::home_url().'/sites/m', $url) ;
        ecjia_admin::$controller->redirect($url);
    }
+   
+   public static function article_merchant_priview_handler($article_id)
+   {
+       $url = RC_Uri::url('article/index/detail', array('article_id' => $article_id));
+       $url = str_replace(RC_Uri::site_url(), RC_Uri::home_url().'/sites/m', $url) ;
+       ecjia_admin::$controller->redirect($url);
+   }
 }
 
 RC_Hook::add_action( 'goods_merchant_priview_handler', array('merchant_touch_hooks', 'goods_merchant_priview_handler') );
+RC_Hook::add_action( 'article_merchant_priview_handler', array('merchant_touch_hooks', 'article_merchant_priview_handler') );
 
 // end
