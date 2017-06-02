@@ -216,7 +216,6 @@ class ecjia_touch_api
  	const SHOP_CAPTCHA_SMS	= 'shop/captcha/sms';//修改绑定手机
  	const SHOP_CAPTCHA_MAIL	= 'shop/captcha/mail';//修改绑定邮箱
  	
- 	const ARTICLE_CATEGORY = 'article/category'; //文章分类
  	const ARTICLE_LIST     = 'article/list';//某一分类下的文章
  	const ARTICLE_DETAIL   = 'article/detail';//文章详情
  	CONST ARTICLE_COMMENT_CREATE = 'article/comment/create';//添加文章评论
@@ -224,6 +223,7 @@ class ecjia_touch_api
  	CONST ARTICLE_LIKE_ADD = 'article/like/add';//文章点赞
  	CONST ARTICLE_LIKE_CANCEL = 'article/like/cancel';//文章取消点赞
  	CONST ARTICLE_SUGGESTLIST = 'article/suggestlist';//精选文章
+ 	CONST ARTICLE_HOME_CYCLEIMAGE = 'article/home/cycleimage';//发现页文章分类及轮播图
 }
 
 // end
