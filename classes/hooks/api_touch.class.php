@@ -59,8 +59,14 @@ class api_touch_hooks {
         
         return $callback_url;
     }
+    
+    public static function payment_respond_template($respondContent, $msg, $info) {
+        
+        
+    }
 }
 
 RC_Hook::add_filter( 'payment_callback_url_filter', array('api_touch_hooks', 'wxpay_callback_url'), 10, 2);
+RC_Hook::add_filter( 'payment_respond_template', array('api_touch_hooks', 'payment_respond_template'));
 
 // end
