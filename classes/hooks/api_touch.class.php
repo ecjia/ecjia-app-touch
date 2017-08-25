@@ -61,6 +61,6 @@ class api_touch_hooks {
     }
 }
 
-RC_Hook::add_filter( 'pay_wxpay_callback_url_filter', array('api_touch_hooks', 'wxpay_callback_url'), 10, 2);
+RC_Hook::add_filter( 'payment_callback_url_filter', array('api_touch_hooks', 'wxpay_callback_url'), 10, 2);
 
 // end
