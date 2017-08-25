@@ -55,6 +55,8 @@ class api_touch_hooks {
             $callback_url = RC_Uri::url('pay/index/notify');
         }
         
+        $callback_url = str_replace('sites/api/', 'sites/m/', $callback_url);
+        
         return $callback_url;
     }
 }
