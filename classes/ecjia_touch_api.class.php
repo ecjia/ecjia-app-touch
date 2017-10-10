@@ -124,6 +124,7 @@ class ecjia_touch_api
  	const ORDER_REMINDER       = 'order/reminder'; //提醒卖家发货
  	const ORDER_UPDATE	       = 'order/update';//订单更新
  	const ORDER_EXPRESS        = 'order/express';//订单快递
+ 	const EXPRESS_USER_LOCATION = 'express/user/location';
  	
  	//==============================================
  	// 用户
