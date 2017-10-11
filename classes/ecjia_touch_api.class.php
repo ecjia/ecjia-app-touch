@@ -225,6 +225,11 @@ class ecjia_touch_api
  	CONST ARTICLE_LIKE_CANCEL = 'article/like/cancel';//文章取消点赞
  	CONST ARTICLE_SUGGESTLIST = 'article/suggestlist';//精选文章
  	CONST ARTICLE_HOME_CYCLEIMAGE = 'article/home/cycleimage';//发现页文章分类及轮播图
+ 	
+ 	//闪惠
+ 	const QUICK_ORDER_LIST = 'quick/order/list';//我的优惠买单列表
+ 	const QUICK_FLOW_CHECKORDER = 'quickpay/flow/checkOrder';//闪惠优惠买单检查购物流订单
+ 	
 }
 
 // end
