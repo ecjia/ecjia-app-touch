@@ -227,11 +227,12 @@ class ecjia_touch_api
  	CONST ARTICLE_HOME_CYCLEIMAGE = 'article/home/cycleimage';//发现页文章分类及轮播图
  	
  	//闪惠
- 	const QUICKPAY_ORDER_LIST = 'quickpay/order/list';//我的优惠买单列表
- 	const QUICKPAY_FLOW_CHECKORDER = 'quickpay/flow/checkOrder';//闪惠优惠买单检查购物流订单
- 	const QUICKPAY_FLOW_DONE = 'quickpay/flow/done';//闪惠购物流结算
- 	const QUICKPAY_ORDER_DETAIL = 'quickpay/order/detail';
- 	const QUICKPAY_ORDER_PAY = 'quickpay/order/pay';
+ 	const QUICKPAY_ORDER_LIST 		= 'quickpay/order/list';//我的优惠买单列表
+ 	const QUICKPAY_FLOW_CHECKORDER 	= 'quickpay/flow/checkOrder';//闪惠优惠买单检查购物流订单
+ 	const QUICKPAY_FLOW_DONE 		= 'quickpay/flow/done';//闪惠购物流结算
+ 	const QUICKPAY_ORDER_DETAIL 	= 'quickpay/order/detail';
+ 	const QUICKPAY_ORDER_PAY 		= 'quickpay/order/pay';
+ 	const QUICKPAY_ACTIVIRY_LIST 	= 'quickpay/activity/list';
 }
 
 // end
