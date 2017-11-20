@@ -108,11 +108,11 @@ class admin_shop_config extends ecjia_admin {
 		}
 		RC_Script::localize_script( 'ecjia-shop_config', 'shop_config_lang', $shop_config_jslang );
 
-		$this->assign('countries',    $this->db_region->get_regions());
+		$this->assign('countries', with(new Ecjia\App\Setting\Country)->getCountries());
 		if (ecjia::config('shop_country') > 0) {
-			$this->assign('provinces', $this->db_region->get_regions(1, ecjia::config('shop_country')));
+			$this->assign('provinces', ecjia_region::getSubarea(ecjia::config('shop_country')));
 			if (ecjia::config('shop_province')) {
-				$this->assign('cities', $this->db_region->get_regions(2, ecjia::config('shop_province')));
+				$this->assign('cities', ecjia_region::getSubarea(ecjia::config('shop_province')));
 			}
 		}
 
