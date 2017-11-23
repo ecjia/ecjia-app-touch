@@ -235,7 +235,7 @@ class ecjia_touch_api
  	const QUICKPAY_ORDER_PAY 		= 'quickpay/order/pay';
  	const QUICKPAY_ACTIVIRY_LIST 	= 'quickpay/activity/list';
  	
- 	const ADMIN_SHOP_TOKEN = 'admin/shop/token';
+ 	const ADMIN_SHOP_TOKEN = 'admin/shop/token';//获取后台token
 }
 
 // end
