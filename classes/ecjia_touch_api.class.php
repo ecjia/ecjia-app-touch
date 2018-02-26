@@ -244,6 +244,9 @@ class ecjia_touch_api
  	//退款退货
  	const REFUND_RESIONS = 'refund/reasons';//订单退款原因
  	const REFUND_APPLY = 'refund/apply';//订单退款申请
+ 	const REFUND_LIST = 'refund/list';//我的退款列表
+ 	const REFUND_DETAIL = 'refund/detail';//退款详情
+ 	const REFUND_CANCEL = 'refund/cancel';//撤销退款申请
 }
 
 // end
