@@ -240,6 +240,10 @@ class ecjia_touch_api
  	const QUICKPAY_ORDER_DELETE     = 'quickpay/order/delete';//删除闪惠订单
  	
  	const ADMIN_SHOP_TOKEN = 'admin/shop/token';//获取后台token
+ 	
+ 	//退款退货
+ 	const REFUND_RESIONS = 'refund/reasons';//订单退款原因
+ 	const REFUND_APPLY = 'refund/apply';//订单退款申请
 }
 
 // end
