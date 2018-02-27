@@ -222,12 +222,12 @@ class ecjia_touch_api
  	
  	const ARTICLE_LIST     = 'article/list';//某一分类下的文章
  	const ARTICLE_DETAIL   = 'article/detail';//文章详情
- 	CONST ARTICLE_COMMENT_CREATE = 'article/comment/create';//添加文章评论
- 	CONST ARTICLE_COMMENTS = 'article/comments';//文章评论列表
- 	CONST ARTICLE_LIKE_ADD = 'article/like/add';//文章点赞
- 	CONST ARTICLE_LIKE_CANCEL = 'article/like/cancel';//文章取消点赞
- 	CONST ARTICLE_SUGGESTLIST = 'article/suggestlist';//精选文章
- 	CONST ARTICLE_HOME_CYCLEIMAGE = 'article/home/cycleimage';//发现页文章分类及轮播图
+ 	const ARTICLE_COMMENT_CREATE = 'article/comment/create';//添加文章评论
+ 	const ARTICLE_COMMENTS = 'article/comments';//文章评论列表
+ 	const ARTICLE_LIKE_ADD = 'article/like/add';//文章点赞
+ 	const ARTICLE_LIKE_CANCEL = 'article/like/cancel';//文章取消点赞
+ 	const ARTICLE_SUGGESTLIST = 'article/suggestlist';//精选文章
+ 	const ARTICLE_HOME_CYCLEIMAGE = 'article/home/cycleimage';//发现页文章分类及轮播图
  	
  	//闪惠
  	const QUICKPAY_ORDER_LIST 		= 'quickpay/order/list';//我的优惠买单列表
@@ -247,6 +247,10 @@ class ecjia_touch_api
  	const REFUND_LIST = 'refund/list';//我的退款列表
  	const REFUND_DETAIL = 'refund/detail';//退款详情
  	const REFUND_CANCEL = 'refund/cancel';//撤销退款申请
+ 	const REFUND_RETURNWAY_HOME = 'refund/returnway/home';//上门取件返回方式
+ 	const REFUND_RETURNWAY_EXPRESS = 'refund/returnway/express';//自选快递返回方式
+ 	const REFUND_RETURNWAY_SHOP = 'refund/returnway/shop';//到店退货返回方式
+ 	const REFUND_PAYRECORD = 'refund/payrecord';//退款进度
 }
 
 // end
