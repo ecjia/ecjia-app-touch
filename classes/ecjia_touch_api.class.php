@@ -251,6 +251,9 @@ class ecjia_touch_api
  	const REFUND_RETURNWAY_EXPRESS = 'refund/returnway/express';//自选快递返回方式
  	const REFUND_RETURNWAY_SHOP = 'refund/returnway/shop';//到店退货返回方式
  	const REFUND_PAYRECORD = 'refund/payrecord';//退款进度
+ 	
+ 	const CAPTCHA_IMAGE = 'captcha/image';
+ 	
 }
 
 // end
