@@ -253,6 +253,7 @@ class ecjia_touch_api
  	const REFUND_PAYRECORD = 'refund/payrecord';//退款进度
  	
  	const CAPTCHA_IMAGE = 'captcha/image';
+ 	const AFFILIATE_USER_INVITE = 'affiliate/user/invite';
  	
 }
 
