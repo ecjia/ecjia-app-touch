@@ -193,6 +193,7 @@ class ecjia_touch_api
  	const MERCHANT_GOODS_SUGGESTLIST = 'merchant/goods/suggestlist';//商店推荐商品
  	const MERCHANT_SHOP_PAYMENT      = 'merchant/shop/payment';//获取商家支付方式列表
  	const MERCHANT_CONFIG         	 = 'merchant/config';//商店基本信息
+ 	const MERCHANT_NEARBY         	 = 'merchant/nearby';//附近店铺
  	
  	//商家入驻
  	const ADMIN_MERCHANT_SIGNUP     = 'admin/merchant/signup';//提交入驻信息
