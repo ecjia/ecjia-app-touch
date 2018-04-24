@@ -101,6 +101,8 @@ class ecjia_touch_api
  	const CART_CHECKED		= 'cart/checked';//购物车更新选中状态
  	const FLOW_CHECKORDER 	= 'flow/checkOrder';//购物流检查订单
  	const FLOW_DONE			= 'flow/done';//购物流完成
+ 	const STOREPICKUP_FLOW_CHECKORDER 	= 'storepickup/flow/checkOrder';//购物流检查订单
+ 	const STOREPICKUP_FLOW_DONE			= 'storepickup/flow/done';//购物流完成
  	
  	//==============================================
  	// 商品
