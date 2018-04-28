@@ -213,7 +213,8 @@ class ecjia_touch_api
  	const ORDERS_COMMENT_DETAIL     = 'orders/comment/detail';//获取单个订单的评论详情
  	
  	const STORE_COMMENTS			= 'store/comments';//店铺评论
- 	
+ 	const STORE_BUSINESS_CITY       = 'store/business/city';
+
  	//==============================================
  	// 绑定手机号或邮箱
  	//==============================================
