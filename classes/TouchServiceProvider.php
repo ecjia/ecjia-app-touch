@@ -2,9 +2,9 @@
 
 namespace Ecjia\App\Touch;
 
-use Royalcms\Component\App\AppServiceProvider;
+use Royalcms\Component\App\AppParentServiceProvider;
 
-class TouchServiceProvider extends  AppServiceProvider
+class TouchServiceProvider extends  AppParentServiceProvider
 {
     
     public function boot()
