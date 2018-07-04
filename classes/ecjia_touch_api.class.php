@@ -259,6 +259,8 @@ class ecjia_touch_api
  	const CAPTCHA_IMAGE = 'captcha/image';
  	const AFFILIATE_USER_INVITE = 'affiliate/user/invite';
  	
+ 	const GROUPBUY_GOODS_LIST = 'groupbuy/goods/list';
+ 	
 }
 
 // end
