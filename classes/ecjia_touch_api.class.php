@@ -260,7 +260,7 @@ class ecjia_touch_api
  	const AFFILIATE_USER_INVITE = 'affiliate/user/invite';
  	
  	const GROUPBUY_GOODS_LIST = 'groupbuy/goods/list';
- 	
+ 	const MERCHANT_GROUPBUY_GOODS_LIST = 'merchant/groupbuy/goods/list';
 }
 
 // end
