@@ -61,8 +61,6 @@ function touch_common_loading() {
     // RC_Loader::load_app_class('touch_page', 'touch', false);
     RC_Loader::load_theme('extras/class/touch/touch_page.class.php');
 
-    RC_Lang::load('touch/common');
-    RC_Lang::load('touch/user');
     //判断是否显示头部和底部
     if (!empty($_GET['hidenav']) && !empty($_GET['hidetab'])) {
         RC_Cookie::set('hideinfo', 1, array('expire' => 360000));
