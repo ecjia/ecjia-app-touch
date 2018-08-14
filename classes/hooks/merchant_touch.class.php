@@ -52,8 +52,8 @@ class merchant_touch_hooks {
    {
        $url = RC_Uri::url('goods/index/show', array('goods_id' => $goods_id));
        $url = str_replace(RC_Uri::site_url(), RC_Uri::home_url().'/sites/m', $url) ;
-       $response = ecjia_merchant::$controller->redirect($url);
-       $response->send();
+       ecjia_merchant::$controller->redirect($url);
+       royalcms('response')->send();
        exit(0);
    }
    
@@ -61,8 +61,8 @@ class merchant_touch_hooks {
    {
        $url = RC_Uri::url('article/index/detail', array('article_id' => $article_id));
        $url = str_replace(RC_Uri::site_url(), RC_Uri::home_url().'/sites/m', $url) ;
-       $response = ecjia_merchant::$controller->redirect($url);
-       $response->send();
+       ecjia_merchant::$controller->redirect($url);
+       royalcms('response')->send();
        exit(0);
    }
 }
