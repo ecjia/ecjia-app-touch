@@ -86,7 +86,7 @@ class ecjia_touch_api
     // 红包模块
     //==============================================
  	const BONUS_VALIDATE 	= 'bonus/validate';//红包获取验证
- 	const BONUS_BIDN		= 'bonus/bind';//红包兑换
+ 	const BONUS_BIND		= 'bonus/bind';//红包兑换
  	const BONUS_COUPON 		= 'bonus/coupon';//获取优惠红包列表信息O2O
  	const RECEIVE_COUPON 	= 'receive/coupon';//领取商品或店铺优惠券
  	const SEND_COUPON 		= 'send/coupon';//获取优惠券
