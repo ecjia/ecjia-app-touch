@@ -69,14 +69,34 @@ class ecjia_touch_user extends RC_Object {
         
         return array_get($res, 'user');
     }
+
+    public function connectSignin($openid, $connect_code)
+    {
+        $data = [
+            'openid' => $openid,
+            'code' => $connect_code,
+        ];
+        $api = ecjia_touch_manager::make()->api(ecjia_touch_api::CONNECT_SIGNIN)->data($data);
+        $res = $api->run();
+        if (is_ecjia_error($res)) {
+            return $api->getError();
+        }
+
+        $this->setUserinfo($res);
+
+        return array_get($res, 'user');
+    }
     
     public function setUserinfo($res) {
-        $sid = array_get($res, 'session.sid');
+        $token = array_get($res, 'session.sid');
+        if (empty($sid)) {
+            $token = array_get($res, 'token');
+        }
         
         $response = royalcms('response');
-        $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $sid));
+        $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $token));
         
-        $this->cacheUserinfo($sid, array_get($res, 'user'));
+        $this->cacheUserinfo($token, array_get($res, 'user'));
     }
     
     protected function cacheUserinfo($cookieid, $user) {
