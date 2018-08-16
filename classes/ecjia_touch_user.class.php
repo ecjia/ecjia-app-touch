@@ -205,7 +205,7 @@ class ecjia_touch_user extends RC_Object {
             if (!is_ecjia_error($admin_shop_token)) {
                 $token = $admin_shop_token['access_token'];
                 $response = royalcms('response');
-                $response->withCookie(RC_Cookie::forever(self::ADMIN_SHOP_TOKEN, $token));
+                $response->withCookie(RC_Cookie::forever(self::API_ADMIN_COOKIE, $token));
             } else {
                 //API请求返回错误
 
