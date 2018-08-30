@@ -9,7 +9,7 @@ class TouchServiceProvider extends  AppParentServiceProvider
     
     public function boot()
     {
-        $this->package('ecjia/app-touch', null, dirname(__DIR__));
+        $this->package('ecjia/app-touch');
     }
     
     public function register()
