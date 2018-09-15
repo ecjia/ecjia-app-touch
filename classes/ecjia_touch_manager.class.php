@@ -58,18 +58,22 @@ class ecjia_touch_manager extends Ecjia\App\Api\Requests\ApiManager
      */
     const serverHost = '/sites/api/?url=';
 
-    public function __construct() {
+    protected $driver = 'local';
+
+    public function __construct()
+    {
         parent::__construct();
 
         $this->header(array(
         	'device-udid'     => RC_Session::getId(),
-            'device-client'   => 'h5',
-            'device-code'     => '6004',
+            'device-client'   => 'local', //h5
+            'device-code'     => '6009',  //6004
             'api-version'     => '1.19',
         ));
     }
 
-    public function serverHost() {
+    public function serverHost()
+    {
         return RC_Hook::apply_filters('custom_site_api_url', RC_Uri::home_url() . static::serverHost);
     }
 }
