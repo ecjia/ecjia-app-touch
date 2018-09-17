@@ -58,7 +58,7 @@ class ecjia_touch_manager extends Ecjia\App\Api\Requests\ApiManager
      */
     const serverHost = '/sites/api/?url=';
 
-//    protected $driver = 'local';
+    protected $driver = 'local';
 
     public function __construct()
     {
