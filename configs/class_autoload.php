@@ -7,8 +7,8 @@
  */
 
 return [
-    'class_ecjia_touch_user' => 'ecjia_touch_user',
-    'class_ecjia_touch_page' => 'ecjia_touch_page',
+    'ecjia_touch_user' => 'ecjia_touch_user',
+    'ecjia_touch_page' => 'ecjia_touch_page',
 
     /*
      * ========================================
