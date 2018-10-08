@@ -97,10 +97,10 @@ RC_Hook::add_action('ecjia_front_finish_launching', 'touch_common_loading');
 RC_Loader::load_app_class('touch', 'touch', false);
 
 RC_Hook::add_filter('ecjia_theme_template_code', function() {
-    return touch::STORAGEKEY_template;
+    return ecjia_touch::STORAGEKEY_template;
 });
 RC_Hook::add_filter('ecjia_theme_stylename_code', function() {
-    return touch::STORAGEKEY_stylename;
+    return ecjia_touch::STORAGEKEY_stylename;
 });
 RC_Hook::add_filter('page_title_suffix', function ($suffix) {
 	return ;
