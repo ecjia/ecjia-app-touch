@@ -122,7 +122,15 @@ RC_Hook::add_filter('ecjia_front_session_id', 'set_touch_session_id');
 /**
  * 自动加载类注册
  */
-collect(config('app-touch::class_autoload', []))->map(function($item, $key) {
+RC_Hook::add_action('class_ecjia_touch_user',            function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_user', false);});
+RC_Hook::add_action('class_ecjia_touch_page',            function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_page', false);});
+
+/*
+ * ========================================
+ * API模型加载
+ * ========================================
+ */
+collect(config('app-touch::class_autoload', []))->each(function($item, $key) {
     RC_Hook::add_action('class_'.$key, function () use ($item) {
         RC_Package::package('app::touch')->loadModel($item, false);
     });
