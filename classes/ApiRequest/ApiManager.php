@@ -44,13 +44,16 @@
 //
 //  ---------------------------------------------------------------------------------
 //
-defined('IN_ECJIA') or exit('No permission resources.');
+namespace Ecjia\App\Touch\ApiRequest;
+
+use Ecjia\App\Api\Requests\ApiManager as BaseApiManager;
+use RC_Session;
 
 /**
  * ecjia touch manager API管理类
  * @author royalwang
  */
-class ecjia_touch_manager extends Ecjia\App\Api\Requests\ApiManager
+class ApiManager extends BaseApiManager
 {
     /**
      * 服务器地址
@@ -65,7 +68,7 @@ class ecjia_touch_manager extends Ecjia\App\Api\Requests\ApiManager
         parent::__construct();
 
         $this->header(array(
-        	'device-udid'     => RC_Session::getId(),
+            'device-udid'     => RC_Session::getId(),
             'device-client'   => 'local', //h5,local
             'device-code'     => '6004',  //6004
             'api-version'     => '1.21',
@@ -76,6 +79,7 @@ class ecjia_touch_manager extends Ecjia\App\Api\Requests\ApiManager
     {
         return RC_Hook::apply_filters('custom_site_api_url', RC_Uri::home_url() . static::serverHost);
     }
+
 }
 
 // end
