@@ -44,9 +44,15 @@
 //
 //  ---------------------------------------------------------------------------------
 //
-defined('IN_ECJIA') or exit('No permission resources.');
+namespace Ecjia\App\Touch\Frameworks\Component;
 
-class ecjia_touch_user extends RC_Object {
+use RC_Object;
+use RC_Cookie;
+use ecjia_touch_manager;
+use ecjia_touch_api;
+
+class User extends RC_Object
+{
 
     const TOUCH_USER_COOKIE = 'ecjia_touch_token';
 
