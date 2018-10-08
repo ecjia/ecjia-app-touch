@@ -48,6 +48,8 @@ namespace Ecjia\App\Touch\ApiRequest;
 
 use Ecjia\App\Api\Requests\ApiManager as BaseApiManager;
 use RC_Session;
+use RC_Hook;
+use RC_Uri;
 
 /**
  * ecjia touch manager API管理类
