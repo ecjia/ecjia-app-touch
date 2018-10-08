@@ -56,9 +56,6 @@ function touch_common_loading() {
 		RC_Hook::do_action('ecjia_shop_closed');
 	}
 
-    RC_Loader::load_app_config('constant', 'touch');
-    // RC_Loader::load_app_func('front_global','touch');
-    // RC_Loader::load_app_class('touch_page', 'touch', false);
     RC_Loader::load_theme('extras/class/touch/touch_page.class.php');
 
     RC_Lang::load('touch/common');
@@ -94,8 +91,6 @@ function touch_common_loading() {
 
 RC_Hook::add_action('ecjia_front_finish_launching', 'touch_common_loading');
 
-RC_Loader::load_app_class('touch', 'touch', false);
-
 RC_Hook::add_filter('ecjia_theme_template_code', function() {
     return ecjia_touch::STORAGEKEY_template;
 });
@@ -118,12 +113,6 @@ function set_touch_session_id($session_id) {
     return ;
 }
 RC_Hook::add_filter('ecjia_front_session_id', 'set_touch_session_id');
-
-/**
- * 自动加载类注册
- */
-RC_Hook::add_action('class_ecjia_touch_user',            function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_user', false);});
-RC_Hook::add_action('class_ecjia_touch_page',            function () {RC_Package::package('app::touch')->loadClass('ecjia_touch_page', false);});
 
 /*
  * ========================================
