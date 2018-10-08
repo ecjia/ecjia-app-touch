@@ -47,9 +47,11 @@
 defined('IN_ECJIA') or exit('No permission resources.');
 
 class ecjia_touch_user extends RC_Object {
-    
-    const API_USER_COOKIE = 'ecjia_api_token';
-    const API_ADMIN_COOKIE = 'ecjia_admin_api_token';
+
+    const TOUCH_USER_COOKIE = 'ecjia_touch_token';
+
+    const API_USER_COOKIE   = 'ecjia_api_token';
+    const API_ADMIN_COOKIE  = 'ecjia_admin_api_token';
 
     /**
      * 登录
@@ -183,6 +185,16 @@ class ecjia_touch_user extends RC_Object {
                 $token = $shop_token['access_token'];
                 $response = royalcms('response');
                 $response->withCookie(RC_Cookie::forever(self::API_USER_COOKIE, $token));
+
+                if (empty(RC_Cookie::get(self::TOUCH_USER_COOKIE))) {
+                    $response->withCookie(RC_Cookie::set(self::TOUCH_USER_COOKIE, $token, [
+                        'path' => config('session.path'),
+                        'expire' => config('session.expire'),
+                        'domain' => config('session.domain'),
+                        'secure' => config('session.secure'),
+                        'httponly' => config('session.httponly'),
+                        ]));
+                }
             } else {
                 //API请求返回错误
 
