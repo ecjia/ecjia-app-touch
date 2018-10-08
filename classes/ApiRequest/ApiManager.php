@@ -71,9 +71,10 @@ class ApiManager extends BaseApiManager
 
         $this->header(array(
             'device-udid'     => RC_Session::getId(),
-            'device-client'   => 'local', //h5,local
+            'device-client'   => 'h5',    //h5
             'device-code'     => '6004',  //6004
             'api-version'     => '1.21',
+            'api-driver'      => 'local',
         ));
     }
 
