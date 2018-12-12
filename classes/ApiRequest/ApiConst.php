@@ -272,6 +272,7 @@ class ApiConst
     //支付密码
     const USER_PAYPASSWORD_SMS_CHECKCODE = 'user/paypassword/sms/checkcode';
     const USER_PAYPASSWORD_MODIFY        = 'user/paypassword/modify';
+    const PAYMENT_PAY_BALANCE            = 'payment/pay/balance';
 }
 
 // end
