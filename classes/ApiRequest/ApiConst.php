@@ -266,8 +266,12 @@ class ApiConst
     const CAPTCHA_IMAGE             = 'captcha/image';
     const AFFILIATE_USER_INVITE     = 'affiliate/user/invite';
 
-    const GROUPBUY_GOODS_LIST       = 'groupbuy/goods/list';
+    const GROUPBUY_GOODS_LIST           = 'groupbuy/goods/list';
     const MERCHANT_GROUPBUY_GOODS_LIST  = 'merchant/groupbuy/goods/list';
+
+    //支付密码
+    const USER_PAYPASSWORD_SMS_CHECKCODE = 'user/paypassword/sms/checkcode';
+    const USER_PAYPASSWORD_MODIFY        = 'user/paypassword/modify';
 }
 
 // end
