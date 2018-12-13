@@ -146,6 +146,7 @@ class ApiConst
     const USER_ACCOUNT_PAY          = 'user/account/pay';//用户充值付款
     const USER_ACCOUNT_RAPLY        = 'user/account/raply';//用户提现申请
     const USER_ACCOUNT_CANCEL       = 'user/account/cancel';//用户申请取消
+    const USER_ACCOUNT_RECORD_DETAIL= 'user/account/record/detail';//用户充值提现详情
     const USER_ACCOUNT_UPDATE       = 'user/account/update';//修改会员账户信息
     const USER_BONUS                = 'user/bonus';//会员红包列表
     const VALIDATE_BIND             = 'validate/bind';//验证用户绑定注册
