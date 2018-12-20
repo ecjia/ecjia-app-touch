@@ -274,6 +274,7 @@ class ApiConst
     const USER_PAYPASSWORD_SMS_CHECKCODE = 'user/paypassword/sms/checkcode';
     const USER_PAYPASSWORD_MODIFY        = 'user/paypassword/modify';
     const PAYMENT_PAY_BALANCE            = 'payment/pay/balance';
+    const SHOP_SPECIAL_README_USERDELETE = 'shop/special/readme/userdelete';
 }
 
 // end
