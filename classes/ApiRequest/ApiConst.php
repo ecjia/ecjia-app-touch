@@ -275,6 +275,10 @@ class ApiConst
     const USER_PAYPASSWORD_MODIFY        = 'user/paypassword/modify';
     const PAYMENT_PAY_BALANCE            = 'payment/pay/balance';
     const SHOP_SPECIAL_README_USERDELETE = 'shop/special/readme/userdelete';
+
+    //注销账号
+    const USER_ACCOUNT_DELETE_APPLY   = 'user/account/delete/apply';//申请注销
+    const USER_ACCOUNT_ACTIVATE_APPLY = 'user/account/activate/apply';//申请激活
 }
 
 // end
