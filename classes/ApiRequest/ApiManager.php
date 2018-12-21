@@ -59,7 +59,7 @@ class ApiManager extends BaseApiManager
 {
     /**
      * 服务器地址
-     * @var serverHost
+     * @var string serverHost
      */
     const serverHost = '/sites/api/?url=';
 
