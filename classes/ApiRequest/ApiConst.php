@@ -168,6 +168,9 @@ class ApiConst
     const USER_SIGNUPFIELDS         = 'user/signupFields';//用户注册字段
     const USER_USERBIND             = 'user/userbind';//手机快速注册
 
+    const USER_BANK_BIND            = 'user/bank/bind';//会员绑定/更新银行卡
+    const USER_INFO_BANKCARD        = 'user/info/bankcard';//获取用户绑定的银行卡信息
+
     //==============================================
     // 推广
     //==============================================
@@ -233,6 +236,7 @@ class ApiConst
 
     const SHOP_CAPTCHA_SMS	        = 'shop/captcha/sms';//修改绑定手机
     const SHOP_CAPTCHA_MAIL	        = 'shop/captcha/mail';//修改绑定邮箱
+    const SHOP_BANK                 = 'shop/banks';//用户绑定银行卡所支持的银行
 
     const ARTICLE_LIST              = 'article/list';//某一分类下的文章
     const ARTICLE_DETAIL            = 'article/detail';//文章详情
