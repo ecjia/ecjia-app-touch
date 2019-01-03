@@ -170,8 +170,13 @@ class ApiConst
     const USER_SIGNUPFIELDS         = 'user/signupFields';//用户注册字段
     const USER_USERBIND             = 'user/userbind';//手机快速注册
 
-    const USER_BANK_BIND            = 'user/bank/bind';//会员绑定/更新银行卡
     const USER_INFO_BANKCARD        = 'user/info/bankcard';//获取用户绑定的银行卡信息
+
+    //提现
+    const WITHDRAW_BANKCARD_BIND        = 'withdraw/bankcard/bind';//会员绑定/更新提现银行卡
+    const WITHDRAW_BANKS                = 'withdraw/banks';//用户提现所支持的银行
+    const WITHDRAW_BANKCARD_DELETE      = 'withdraw/bankcard/delete';//会员删除提现绑定的卡
+    const WITHDRAW_WECHAT_WALLET_BIND   = 'withdraw/wechat/wallet/bind';//会员绑定/更新微信钱包提现
 
     //==============================================
     // 推广
@@ -188,6 +193,7 @@ class ApiConst
     const CONNECT_SIGNIN            = 'connect/signin';//第三方关联登录
     const CONNECT_SIGNUP            = 'connect/signup';//第三方关联注册
     const CONNECT_BIND              = 'connect/bind';//第三方关联绑定
+    const CONNECT_UNBIND            = 'connect/unbind';// 会员解除绑定的第三方关联账号（微信，QQ等）
 
 
     //==============================================
