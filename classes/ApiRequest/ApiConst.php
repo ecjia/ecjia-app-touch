@@ -279,6 +279,7 @@ class ApiConst
 
     const CAPTCHA_IMAGE             = 'captcha/image';
     const AFFILIATE_USER_INVITE     = 'affiliate/user/invite';
+    const AFFILIATE_USER_INVITEE    = 'affiliate/user/invitee';
 
     const GROUPBUY_GOODS_LIST           = 'groupbuy/goods/list';
     const MERCHANT_GROUPBUY_GOODS_LIST  = 'merchant/groupbuy/goods/list';
