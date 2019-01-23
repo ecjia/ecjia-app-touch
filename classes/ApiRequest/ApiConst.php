@@ -293,6 +293,8 @@ class ApiConst
     //注销账号
     const USER_ACCOUNT_DELETE_APPLY   = 'user/account/delete/apply';//申请注销
     const USER_ACCOUNT_ACTIVATE_APPLY = 'user/account/activate/apply';//申请激活
+
+    const GOODS_LIST = 'goods/list';//商品列表
 }
 
 // end
