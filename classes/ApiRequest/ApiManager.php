@@ -63,7 +63,7 @@ class ApiManager extends BaseApiManager
      */
     const serverHost = '/sites/api/?url=';
 
-    protected $driver = 'local';
+//     protected $driver = 'local';
 
     public function __construct()
     {
