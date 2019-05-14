@@ -66,10 +66,10 @@ class merchant_touch_hooks {
    
    public static function goods_merchant_pc_priview_handler($goods_id)
    {
-   	$url = RC_Uri::url('goods/index/show', array('goods_id' => $goods_id));
-   	$url = str_replace(RC_Uri::site_url(), RC_Uri::home_url(), $url) ;
-   	ecjia_merchant::$controller->redirect($url);
-   	ecjia_merchant::$controller->exited();
+	   $url = RC_Uri::url('goods/index/show', array('goods_id' => $goods_id));
+	   $url = str_replace(RC_Uri::site_url(), RC_Uri::home_url(), $url) ;
+	   ecjia_merchant::$controller->redirect($url);
+	   ecjia_merchant::$controller->exited();
    }
    
    public static function article_merchant_priview_handler($article_id)
