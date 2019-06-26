@@ -103,6 +103,7 @@ class ApiConst
     const FLOW_DONE			        = 'flow/done';//购物流完成
     const STOREPICKUP_FLOW_CHECKORDER 	= 'storepickup/flow/checkOrder';//购物流检查订单
     const STOREPICKUP_FLOW_DONE			= 'storepickup/flow/done';//购物流完成
+    const TANGCHI_STOREBUY_FLOW_DONE	= 'tangchi/storebuy/flow/done';//购物流完成
 
     //==============================================
     // 商品
