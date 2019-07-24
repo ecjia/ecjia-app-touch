@@ -307,6 +307,9 @@ class ApiConst
     const AFFILIATE_GRADE         = 'affiliate/grade';//分销商权益列表，各个等级分销商权益关联商品
     const AFFILIATE_GRADE_DETAIL  = 'affiliate/grade/detail';//分销商权益详情
     const AFFILIATE_DISTRIBUTOR_USERINFO  = 'affiliate/distributor/userinfo';//获取用户分销信息
+
+    const USER_AGENT_USERINFO               = 'user/agent/userinfo'; //推广员推广中心信息
+
 }
 
 // end
