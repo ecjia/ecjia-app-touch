@@ -191,6 +191,7 @@ class ApiConst
     const INVITE_INVITEE_RULE       = 'invite/invitee/rule';//获取被邀请分享说明设置
 
     const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOG   = 'invite/store/agent/affiliate/account/log';//加入二级代理商
+    const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOGDETAIL   = 'invite/store/agent/affiliate/account/logdetail';//加入二级代理商
 
 
     //==============================================
