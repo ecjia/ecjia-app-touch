@@ -190,6 +190,18 @@ class ApiConst
     const INVITE_VALIDATE           = 'invite/validate';//邀请码
     const INVITE_INVITEE_RULE       = 'invite/invitee/rule';//获取被邀请分享说明设置
 
+    const USER_AGENT_INFO   		= 'user/agent/info';//是否是代理商
+    const INVITE_STORE       		= 'invite/store';//推广店铺
+    const INVITE_STORE_AGENT_USER   = 'invite/store/agent/user';//招募二级代理商二维码
+    const INVITE_STORE_AGENT_INVITER= 'invite/store/agent/inviter';//一级代理商资料
+    const INVITE_STORE_AGENT_JOIN   = 'invite/store/agent/join';//加入二级代理商
+    const INVITE_STORE_AGENT_AFFILIATE_RECORDS   = 'invite/store/agent/affiliate/records';//加入二级代理商
+    const INVITE_STORE_AGENT_AFFILIATE_DETAIL   = 'invite/store/agent/affiliate/detail';//加入二级代理商
+    const INVITE_STORE_AGENT_USER_INVITE   = 'invite/store/agent/user/invitee';//加入二级代理商
+    const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOG   = 'invite/store/agent/affiliate/account/log';//加入二级代理商
+    const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOGDETAIL   = 'invite/store/agent/affiliate/account/logdetail';//加入二级代理商
+    const INVITE_STORE_AGENT_INVITE_STORE   = 'invite/store/agent/invite/store';//加入二级代理商
+
     //==============================================
     // 关联
     //==============================================
