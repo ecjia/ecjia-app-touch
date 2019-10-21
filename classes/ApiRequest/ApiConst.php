@@ -193,6 +193,7 @@ class ApiConst
     const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOG   = 'invite/store/agent/affiliate/account/log';//加入二级代理商
     const INVITE_STORE_AGENT_AFFILIATE_ACCOUNT_LOGDETAIL   = 'invite/store/agent/affiliate/account/logdetail';//加入二级代理商
 
+    const INVITE_STORE_AGENT_AFFILIATE_RECORDS   = 'invite/store/agent/affiliate/records';
 
     //==============================================
     // 关联
